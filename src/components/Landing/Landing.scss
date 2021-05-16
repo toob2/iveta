@@ -1,0 +1,47 @@
+@import "../../Styles/colors";
+@import "../../Styles/animations";
+@import "../../Styles/mixins";
+
+.landing {
+  z-index: -100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-image: url(../Images/prague.jpeg);
+  background-size: cover;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  position: relative;
+
+  &__text-box {
+    position: absolute;
+    border-radius: 0.5rem;
+    width: 70%;
+    top: 15%;
+    text-align: center;
+    padding: 1.25rem;
+    background-color: rgba($color-secondary, 0.2);
+
+    animation: appear 1s ease-in-out;
+    color: white;
+
+    &__item {
+      font-weight: 600;
+      padding: 1rem;
+      font-size: 2.5rem;
+    }
+  }
+}
+
+.landing-button {
+  position: absolute;
+  bottom: 15%;
+  padding: 2rem;
+  color: white;
+  background-color: rgba($color-secondary, 0.2);
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  animation: appear 1s ease-in-out;
+}

@@ -1,0 +1,19 @@
+@import "../../Styles/colors";
+
+.map {
+  &__marker {
+    height: 2rem;
+    color: $color-primary;
+  }
+  &__icon {
+    animation-name: bounce;
+    animation-duration: 2.25s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+  }
+}
+
+.bounce {
+  animation-name: bounce;
+  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+}

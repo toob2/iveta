@@ -1,0 +1,53 @@
+@import "../../Styles/colors";
+
+.main-footer {
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  color: $color-secondary;
+  background: $color-primary;
+  padding: 0.5rem;
+
+  &__heading {
+    font-size: 1.65rem;
+    padding: 0.5rem 0;
+  }
+
+  &__hr {
+    background-color: $color-secondary;
+    height: 0.15rem;
+    border: 0;
+    margin: 1rem 0;
+  }
+
+  &__link {
+    font-weight: 600;
+    color: $color-secondary;
+    text-decoration: none;
+    &:active,
+    &:hover {
+      color: $color-tertiary;
+    }
+  }
+
+  .row {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0.5rem 0;
+  }
+
+  .col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    list-style: none;
+    font-size: 1rem;
+  }
+}

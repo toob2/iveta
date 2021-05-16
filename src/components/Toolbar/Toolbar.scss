@@ -1,0 +1,78 @@
+@import "../../Styles/colors";
+
+.toolbar {
+  z-index: 100;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: $color-primary;
+  height: $toolbar-height;
+}
+
+.toolbar__navigation {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 1rem;
+}
+
+.toolbar__logo {
+  margin-left: 0.5rem;
+}
+
+.toolbar__logo a {
+  color: $color-secondary;
+  text-decoration: none;
+  font-size: 2.75rem;
+  &:active {
+    color: $color-tertiary;
+  }
+}
+
+.spacer {
+  flex: 1;
+}
+
+.toolbar_navigation-items {
+  ul {
+    flex: 1 1 auto;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  li {
+    padding: 0 0.5rem;
+  }
+  li:not(:first-child) {
+    border-left: solid 1px $color-secondary;
+  }
+  a {
+    color: $color-secondary;
+    text-decoration: none;
+    font-weight: 500;
+  }
+}
+
+.toolbar_navigation-items a:hover,
+.toolbar_navigation-items a:active {
+  color: $color-tertiary;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .toolbar_navigation-items {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .toolbar__toggle-button {
+    display: none;
+  }
+
+  .toolbar__logo {
+    margin-left: 0;
+  }
+}

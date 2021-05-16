@@ -1,0 +1,115 @@
+@import "../../Styles/colors";
+@import "../../Styles/mixins";
+
+.form {
+  height: 100%;
+  margin-top: $toolbar-height;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem;
+
+  &__wrapper {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2rem;
+  }
+
+  &__errorMessage {
+    color: $color-primary;
+    color: rgb(236, 59, 59);
+    font-size: 1rem;
+    font-weight: 700;
+    margin: -0.2rem;
+
+    &--ok {
+      color: transparent;
+      font-size: 1rem;
+      font-weight: 700;
+      margin: -0.2rem;
+    }
+  }
+
+  &__toast {
+    margin-top: $toolbar-height;
+    background-color: $color-success !important;
+    color: $color-secondary !important;
+
+    @include media(mob-lg) {
+      width: 17rem;
+    }
+  }
+}
+
+.input {
+  width: 100%;
+  padding: 0.25rem;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__field {
+    font-family: $font-primary;
+    width: 100%;
+    outline: none;
+    width: 100%;
+    padding: 0.6rem 2rem 0.5rem 3.25rem;
+    box-shadow: 0.5rem 0.2rem 1rem rgba($color-secondary, 1);
+    font-size: 1.25rem;
+    border: 0.2rem $color-tertiary solid;
+    border-radius: 0.3rem;
+
+    &:focus {
+      border: 0.25rem $color-tertiary solid;
+      background-color: rgb(238, 238, 157);
+      font-weight: 500;
+    }
+
+    &--textarea {
+      font-family: $font-primary;
+      font-size: 1.25rem;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    margin-left: 1rem;
+    top: 0.67rem;
+    color: $color-form-icon;
+  }
+}
+
+.btn--submit {
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 2rem;
+  align-self: center;
+  font-size: 1.25rem;
+  padding: 1.25rem 2rem;
+  background-color: $color-primary;
+  color: $color-secondary;
+  font-weight: 500;
+  box-shadow: 1rem 1rem 3rem rgba(black, 0.45);
+  transition: all 0.25s ease-in-out;
+  -webkit-appearance: none;
+
+  &:hover {
+    transform: translateY(0.15rem);
+    box-shadow: 0.75rem 0.75rem 1.75rem rgba(black, 0.45);
+    background-color: darken($color-primary, 10%);
+  }
+
+  &:active {
+    transform: translateY(0.25rem);
+    box-shadow: 0.6rem 0.6rem 1.75rem rgba(black, 0.45);
+    outline: none;
+  }
+}
+
+.Toastify__toast-container--top-right {
+  right: -10rem !important;
+}

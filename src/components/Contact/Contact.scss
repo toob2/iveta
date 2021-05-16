@@ -1,0 +1,42 @@
+@import "../../Styles/colors";
+.contact {
+  height: 100%;
+  width: 100%;
+  z-index: -100;
+}
+
+.contact-details {
+  height: 60rem;
+  display: flex;
+  flex-direction: column;
+  background-image: url(../Images/contact.jpeg);
+  background-size: cover;
+  background-position: 0 $toolbar-height;
+  background-repeat: no-repeat;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.contact-details-box {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  padding: 2rem 2rem;
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    list-style: none;
+    padding: 1rem;
+
+    &__text {
+      padding-left: 0.5rem;
+    }
+  }
+}
+
+.contact-map {
+  height: 40vh;
+}

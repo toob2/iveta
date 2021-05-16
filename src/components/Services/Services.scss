@@ -1,0 +1,50 @@
+@import "../../Styles/colors";
+
+.about {
+  padding: 1.5rem 2rem;
+}
+
+.about-text {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.about-services {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    &__icon {
+      padding: 1rem;
+    }
+    &__header {
+      font-size: 2.25rem;
+    }
+    &__text {
+      padding-top: 0.5rem;
+      font-size: 1.25rem;
+    }
+  }
+}
+
+.about-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  list-style-type: none;
+  li {
+    padding: 0.5rem;
+    font-size: 1.25rem;
+    &::before {
+      padding-right: 0.5rem;
+      content: "";
+    }
+  }
+}
