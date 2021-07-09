@@ -58,10 +58,10 @@ const Form = (props) => {
         message: data.textarea,
       };
       // await emailjs.send(
-      //   "service_lc87bby",
+      //   process.env.REACT_APP_SERVICE,
       //   "template_v9usifk",
       //   templateParams,
-      //   "user_TmUlJJVROMF0JJBc1Qkq0"
+      //   process.env.REACT_APP_USER,
       // );
       triggerToast();
       reset();
@@ -128,7 +128,8 @@ const Form = (props) => {
                 message: "Email může mít maximálně 50 znaků",
               },
               pattern: {
-                value: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                value:
+                  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
                 message: "Zadejte prosím email ve správném formátu",
               },
             })}
