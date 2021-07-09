@@ -1,9 +1,9 @@
 @import "../../Styles/colors";
 @import "../../Styles/animations";
 @import "../../Styles/mixins";
+@import "../../Styles/typography";
 
 .landing {
-  z-index: -100;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,31 +17,110 @@
 
   &__text-box {
     position: absolute;
+    max-width: $body-max-width / 2;
     border-radius: 0.5rem;
-    width: 70%;
-    top: 15%;
+    width: 40%;
+    top: 20%;
     text-align: center;
     padding: 1.25rem;
-    background-color: rgba($color-secondary, 0.2);
-
+    //  background-color: rgba($color-secondary, 0.2);
+    background-color: transparent;
+    overflow: hidden;
+    white-space: wrap;
+    text-overflow: ellipsis;
     animation: appear 1s ease-in-out;
     color: white;
 
     &__item {
       font-weight: 600;
-      padding: 1rem;
-      font-size: 2.5rem;
+      padding: 1rem 0;
+      font-size: 1.25rem;
+
+      @include media(mob-sm) {
+        font-size: 2rem;
+      }
+
+      @include media(mob-med) {
+        font-size: 2.25rem;
+      }
+
+      @include media(mob-lg) {
+        font-size: 2.75rem;
+      }
+
+      @include media(tab-lg) {
+        font-size: 4rem;
+      }
+
+      @include media(tab-lg-lan) {
+        font-size: 4rem;
+      }
+    }
+  }
+
+  &__scrolldown {
+    position: absolute;
+    bottom: 1%;
+    padding: 1rem;
+    animation: appear 1s ease-in-out;
+
+    &__mouse {
+      display: block;
+      cursor: pointer;
+
+      height: 4rem;
+      width: 2rem;
+      border-radius: 2rem;
+      border: 2px solid white;
+
+      &__wheel {
+        height: 0.5rem;
+        width: 0.4rem;
+        margin: 0.35rem auto;
+        background: white;
+        position: relative;
+
+        border: 0.1rem solid #fff;
+        -webkit-border-radius: 0.5rem;
+        border-radius: 0.5rem;
+
+        -webkit-animation: scrollDown 2s infinite;
+        -moz-animation: scrollDown 2s infinite;
+        animation: scrollDown 2s infinite;
+      }
     }
   }
 }
 
-.landing-button {
-  position: absolute;
-  bottom: 15%;
-  padding: 2rem;
-  color: white;
-  background-color: rgba($color-secondary, 0.2);
-  border-radius: 0.5rem;
-  text-transform: uppercase;
-  animation: appear 1s ease-in-out;
+@-webkit-keyframes scrollDown {
+  0% {
+    -webkit-transform: translate(0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: translate(0, 20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes scrollDown {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    transform: translate(0, 20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }

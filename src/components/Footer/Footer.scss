@@ -1,15 +1,24 @@
 @import "../../Styles/colors";
+@import "../../Styles/mixins";
+@import "../../Styles/typography";
 
 .main-footer {
+  height: 100%;
   width: 100%;
   bottom: 0;
   left: 0;
   color: $color-secondary;
   background: $color-primary;
-  padding: 0.5rem;
+  padding: 0.5rem 0;
+
+  &__wrapper {
+    width: 100%;
+    margin: auto;
+    max-width: $body-max-width;
+  }
 
   &__heading {
-    font-size: 1.65rem;
+    font-size: $font-size-default * 1.5;
     padding: 0.5rem 0;
   }
 
@@ -17,13 +26,14 @@
     background-color: $color-secondary;
     height: 0.15rem;
     border: 0;
-    margin: 1rem 0;
+    margin-bottom: 0.5rem;
   }
 
   &__link {
     font-weight: 600;
     color: $color-secondary;
     text-decoration: none;
+    transition: 0.5s ease;
     &:active,
     &:hover {
       color: $color-tertiary;
@@ -33,21 +43,39 @@
   .row {
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
-    padding: 0.5rem 0;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+
+    @include media(mob-lg) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
   }
 
   .col {
+    width: 100%;
+    height: 17rem;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    margin: 1rem 0;
   }
 
   .list {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     list-style: none;
-    font-size: 1rem;
+    font-size: $font-size-default;
+
+    li {
+      padding: 0.1rem;
+    }
   }
+}
+
+.made_by {
+  font-size: $font-size-default;
 }

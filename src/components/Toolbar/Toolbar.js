@@ -4,6 +4,12 @@ import { HashLink as Link } from "react-router-hash-link";
 import "./Toolbar.scss";
 import DrawerToggleButton from "../SideDrawer/DrawerToggleButton";
 
+const scrollWithOffset = (el) => {
+  const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+  const yOffset = -70;
+  window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
+};
+
 const toolbar = (props) => (
   <header className="toolbar">
     <nav className="toolbar__navigation">
@@ -11,20 +17,27 @@ const toolbar = (props) => (
         <a href="/">$YT</a>
       </div>
       <div className="spacer" />
-      <div className="toolbar_navigation-items">
+      <div className="toolbar__navigation-items">
         <ul>
           <li>
-            <Link smooth to="/#">
+            <Link className="nav-underline" smooth to="/#">
               O MNĚ
             </Link>
           </li>
           <li>
-            <Link smooth to="/#services">
+            <Link
+              className="nav-underline"
+              smooth
+              to="/#portfolio-hash"
+              scroll={(el) => scrollWithOffset(el)}
+            >
               PRÁVNÍ SLUŽBY
             </Link>
           </li>
           <li>
-            <Link to="/contact#">KONTAKT</Link>
+            <Link className="nav-underline" to="/contact#">
+              KONTAKT
+            </Link>
           </li>
         </ul>
       </div>

@@ -1,50 +1,84 @@
 @import "../../Styles/colors";
+@import "../../Styles/mixins";
+@import "../../Styles/typography";
 
-.about {
-  padding: 1.5rem 2rem;
+.services {
+  background-color: $color-background-main;
+
+  &__container {
+    padding: 4rem;
+    margin: auto;
+    max-width: $body-max-width;
+  }
+
+  &__about-box {
+    text-align: center;
+    font-size: 2rem;
+  }
 }
 
-.about-text {
-  text-align: center;
-  font-size: 2rem;
-}
-
-.about-services {
-  padding: 4rem;
+.portfolio {
+  margin-top: 2rem;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+
+  @include media(mob-lg) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 
   &__item {
+    height: $portfolio-item-height;
+    max-width: 30rem;
+    border-radius: 1rem;
+    margin: 1.5rem;
+    padding: 0 1rem;
+    background-color: $color-background-portfolio-item;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem;
+    justify-content: flex-start;
+
+    overflow: hidden;
+
     &__icon {
-      padding: 1rem;
+      padding: 2rem;
+      font-size: $portfolio-item-height / 5;
     }
+
     &__header {
-      font-size: 2.25rem;
+      font-size: $portfolio-item-height / 20;
+      text-transform: uppercase;
+      font-weight: 600;
+      text-align: center;
     }
-    &__text {
-      padding-top: 0.5rem;
-      font-size: 1.25rem;
+
+    &__hr {
+      width: 70%;
+      margin: 1.5rem 0;
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      list-style-type: none;
+
+      li {
+        padding: 0.5rem;
+        font-size: 1.5rem;
+      }
     }
   }
 }
 
-.about-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  list-style-type: none;
-  li {
-    padding: 0.5rem;
-    font-size: 1.25rem;
-    &::before {
-      padding-right: 0.5rem;
-      content: "";
-    }
-  }
+.portfolio-hash {
+  height: 2rem;
 }

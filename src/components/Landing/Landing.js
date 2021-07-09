@@ -1,14 +1,31 @@
 import React from "react";
 import "./Landing.scss";
+import { HashLink as Link } from "react-router-hash-link";
 
-const landing = (props) => (
+const scrollWithOffset = (el) => {
+  const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+  const yOffset = -50;
+  window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
+};
+
+const landing = () => (
   <section className="landing">
     <div className="landing__text-box">
       <p className="landing__text-box__item">ADVOKÁTNÍ KANCELÁŘ</p>
       <hr />
       <p className="landing__text-box__item">Mgr. Iveta Strmeňová</p>
     </div>
-    <button className="landing-button">Více o mně</button>
+
+    <div className="landing__scrolldown">
+      <Link
+        smooth
+        to="/#services-hash"
+        scroll={(el) => scrollWithOffset(el)}
+        className="landing__scrolldown__mouse"
+      >
+        <div className="landing__scrolldown__mouse__wheel"></div>
+      </Link>
+    </div>
   </section>
 );
 

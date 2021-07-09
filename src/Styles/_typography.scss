@@ -1,0 +1,16 @@
+@import "/src/Styles/mixins";
+
+// Fonts
+$font-primary: "Roboto", sans-serif;
+$font-secondary: "Lato", sans-serif;
+
+// Font sizes
+$font-size-default: 1.6rem;
+$font-size-navbar: $font-size-default * 1.25;
+
+// Heights
+$toolbar-height: 6rem;
+$portfolio-item-height: 50rem;
+
+// Widths
+$body-max-width: 150rem;

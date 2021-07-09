@@ -80,9 +80,9 @@ const Form = (props) => {
       <div className="form__wrapper">
         {/* Name */}
         <div className="input">
-          <span className="input__icon">
+          <div className="input__icon">
             <FontAwesomeIcon icon={faUser} size="1x" />
-          </span>
+          </div>
           <input
             className="input__field"
             type="text"
@@ -228,8 +228,11 @@ const Form = (props) => {
         ) : (
           <span className="form__errorMessage--ok">ok</span>
         )}
-      </div>
 
+        <div className="form__toast-container">
+          <ToastContainer />
+        </div>
+      </div>
       {/* Submit button */}
       <div className="form__wrapper">
         <div className="input">
@@ -239,9 +242,6 @@ const Form = (props) => {
             className="btn--submit"
           />
         </div>
-      </div>
-      <div className="form__toast-container">
-        <ToastContainer />
       </div>
     </form>
   );

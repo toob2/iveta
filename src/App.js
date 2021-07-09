@@ -16,9 +16,6 @@ import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 class App extends Component {
-  // TODO
-  menuItems = ["O MNĚ", "PRÁVNÍ SLUŽBY", "KONTAKT"];
-
   state = {
     sideDrawerOpen: false,
   };
