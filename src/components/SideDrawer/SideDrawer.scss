@@ -1,4 +1,5 @@
 @import "../../Styles/colors";
+@import "../../Styles/mixins";
 
 .side-drawer {
   height: 100%;
@@ -28,9 +29,13 @@
     align-items: center;
     color: $color-secondary;
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: 500;
     transition: all 0.3s ease-in-out;
+
+    @include media(mob-med) {
+      font-size: 2rem;
+    }
 
     &:hover,
     &:active {

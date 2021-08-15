@@ -11,18 +11,21 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const services = () => (
-  <div className="services" id="services-hash">
+  <div className="services" id="o-mne">
     <div className="services__container">
       <div className="services__about-box">
         <b>Jsem Mgr. Iveta Strmeňová.</b> Dělám moderní advokátní služby
         zaměřené na širokou veřejnost. Business není mojí prioritou, chci
         dosahovat cílů společně s klientem. Vždy se snažím dělat něco navíc a
-        věci vylepšovat.
+        věci vylepšovat. Poskytuji právní služby soukromým klientům z celého
+        světa.
       </div>
-
-      <div className="portfolio" id="portfolio-hash">
+      <div className="portfolio--heading" id="sluzby">
+        Moje služby
+      </div>
+      <hr className="portfolio--heading__hr" />
+      <div className="portfolio">
         {/* Service 1 */}
-
         <div className="portfolio__item">
           <div className="portfolio__item__icon">
             <FontAwesomeIcon icon={faGavel} />

@@ -5,10 +5,14 @@ import "./SideDrawer.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
-const scrollWithOffset = (el) => {
+/**
+ * Scroll with an offset
+ *
+ * @param {Integer}  offset    offset in pixels
+ */
+const scrollWithOffset = (el, offset) => {
   const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
-  const yOffset = -70;
-  window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
+  window.scrollTo({ top: yCoordinate + offset, behavior: "smooth" });
 };
 
 const SideDrawer = (props) => {
@@ -16,6 +20,11 @@ const SideDrawer = (props) => {
   if (props.show) {
     drawerClasses = "side-drawer open";
   }
+
+  const [introActive, setIntroState] = useState(false);
+  const toggleIntro = () => {
+    setIntroState(!introActive);
+  };
 
   const [aboutActive, setAboutState] = useState(false);
   const toggleAbout = () => {
@@ -41,6 +50,23 @@ const SideDrawer = (props) => {
           smooth
           to="/#"
           onClick={props.click}
+          onMouseEnter={toggleIntro}
+          onMouseLeave={toggleIntro}
+        >
+          ÚVOD
+          <FontAwesomeIcon
+            className={`side-drawer__item-icon${introActive ? "-active" : ""}`}
+            icon={faChevronRight}
+            size="2x"
+          />
+        </Link>
+        <hr />
+        <Link
+          className="side-drawer__item"
+          smooth
+          to="/#o-mne"
+          scroll={(el) => scrollWithOffset(el, -20)}
+          onClick={props.click}
           onMouseEnter={toggleAbout}
           onMouseLeave={toggleAbout}
         >
@@ -55,8 +81,8 @@ const SideDrawer = (props) => {
         <Link
           className="side-drawer__item"
           smooth
-          to="/#portfolio-hash"
-          scroll={(el) => scrollWithOffset(el)}
+          to="/#sluzby"
+          scroll={(el) => scrollWithOffset(el, -80)}
           onClick={props.click}
           onMouseEnter={toggleServices}
           onMouseLeave={toggleServices}

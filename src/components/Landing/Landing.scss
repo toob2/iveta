@@ -15,15 +15,27 @@
   background-repeat: no-repeat;
   position: relative;
 
+  &__hr {
+    max-width: 60%;
+    margin: auto;
+
+    @include media(mob-lg) {
+      max-width: 40%;
+    }
+
+    @include media(tab-lg) {
+      max-width: 20%;
+    }
+  }
+
   &__text-box {
     position: absolute;
-    max-width: $body-max-width / 2;
+    max-width: $body-max-width / 1.5;
     border-radius: 0.5rem;
-    width: 40%;
-    top: 20%;
+    width: 90%;
+    top: 17%;
     text-align: center;
     padding: 1.25rem;
-    //  background-color: rgba($color-secondary, 0.2);
     background-color: transparent;
     overflow: hidden;
     white-space: wrap;
@@ -31,21 +43,25 @@
     animation: appear 1s ease-in-out;
     color: white;
 
+    @include media(mob-lg) {
+      top: 20%;
+    }
+
     &__item {
       font-weight: 600;
       padding: 1rem 0;
-      font-size: 1.25rem;
+      font-size: 1.75rem;
 
       @include media(mob-sm) {
-        font-size: 2rem;
-      }
-
-      @include media(mob-med) {
         font-size: 2.25rem;
       }
 
-      @include media(mob-lg) {
+      @include media(mob-med) {
         font-size: 2.75rem;
+      }
+
+      @include media(mob-lg) {
+        font-size: 3rem;
       }
 
       @include media(tab-lg) {

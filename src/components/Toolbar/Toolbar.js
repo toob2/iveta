@@ -4,10 +4,14 @@ import { HashLink as Link } from "react-router-hash-link";
 import "./Toolbar.scss";
 import DrawerToggleButton from "../SideDrawer/DrawerToggleButton";
 
-const scrollWithOffset = (el) => {
+/**
+ * Scroll with an offset
+ *
+ * @param {Integer}  offset    offset in pixels
+ */
+const scrollWithOffset = (el, offset) => {
   const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
-  const yOffset = -70;
-  window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
+  window.scrollTo({ top: yCoordinate + offset, behavior: "smooth" });
 };
 
 const toolbar = (props) => (
@@ -21,6 +25,16 @@ const toolbar = (props) => (
         <ul>
           <li>
             <Link className="nav-underline" smooth to="/#">
+              ÚVOD
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="nav-underline"
+              smooth
+              to="/#o-mne"
+              scroll={(el) => scrollWithOffset(el, -30)}
+            >
               O MNĚ
             </Link>
           </li>
@@ -28,8 +42,8 @@ const toolbar = (props) => (
             <Link
               className="nav-underline"
               smooth
-              to="/#portfolio-hash"
-              scroll={(el) => scrollWithOffset(el)}
+              to="/#sluzby"
+              scroll={(el) => scrollWithOffset(el, -70)}
             >
               PRÁVNÍ SLUŽBY
             </Link>

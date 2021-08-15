@@ -12,7 +12,7 @@ const landing = () => (
   <section className="landing">
     <div className="landing__text-box">
       <p className="landing__text-box__item">ADVOKÁTNÍ KANCELÁŘ</p>
-      <hr />
+      <hr className="landing__hr" />
       <p className="landing__text-box__item">Mgr. Iveta Strmeňová</p>
     </div>
 
