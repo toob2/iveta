@@ -21,7 +21,8 @@ const services = () => (
         světa.
       </div>
       <div className="portfolio--heading" id="sluzby">
-        Moje služby
+        <div className="portfolio--heading__box"></div>
+        <p>Naše služby</p>
       </div>
       <hr className="portfolio--heading__hr" />
       <div className="portfolio">

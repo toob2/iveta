@@ -74,11 +74,11 @@ class App extends Component {
         </ScrollUpButton> */}
         <ScrollUpButton
           style={{ width: 40, height: 40 }}
-          ToggledStyle={{ right: 10 }}
+          ToggledStyle={{ right: 10, bottom: 20 }}
           EasingType="easeInOutQuad"
           StopPosition={0}
           ShowAtPosition={300}
-          AnimationDuration={504}
+          AnimationDuration={500}
         />
       </div>
     );

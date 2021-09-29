@@ -19,7 +19,7 @@ const landing = () => (
     <div className="landing__scrolldown">
       <Link
         smooth
-        to="/#services-hash"
+        to="/#o-mne"
         scroll={(el) => scrollWithOffset(el)}
         className="landing__scrolldown__mouse"
       >
