@@ -43,7 +43,7 @@ const Form = (props) => {
       closeOnClick: true,
       pauseOnHover: true,
       draggable: false,
-      className: "form__toast",
+      className: "contact-form__toast",
       toastId: "notifyToast",
     });
   };
