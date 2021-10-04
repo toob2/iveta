@@ -37,7 +37,7 @@
 
   &__hr {
     max-width: 40%;
-    margin: auto;
+    margin: 4rem auto;
 
     @include media(mob-lg) {
       max-width: 45%;
@@ -50,7 +50,6 @@
 }
 
 .portfolio {
-  margin-top: 2rem;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -66,8 +65,9 @@
   }
 
   &__item {
+    width: 80%;
     max-width: 40rem;
-    height: $portfolio-item-height;
+    min-height: 50rem;
     background: linear-gradient(
       180deg,
       $color-background-primary,
@@ -75,8 +75,8 @@
     );
     border-radius: 1rem;
     box-shadow: 5px blue;
-    margin: 1.5rem;
-    padding: 0 1rem;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -84,8 +84,12 @@
     overflow: hidden;
     transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 
+    @include media(mob-lg) {
+      min-height: 47rem;
+    }
+
     &__icon {
-      padding: 2rem;
+      margin-bottom: 2rem;
       font-size: $portfolio-item-height / 5;
     }
 
@@ -98,7 +102,11 @@
 
     &__hr {
       width: 70%;
-      margin: 1.5rem 0;
+      margin: 3rem 0;
+    }
+
+    &__text {
+      font-weight: 500;
     }
 
     &__list {
@@ -107,6 +115,7 @@
       justify-content: center;
       text-align: center;
       list-style-type: none;
+      margin-bottom: 2rem;
 
       li {
         padding: 0.5rem;
@@ -116,7 +125,7 @@
 
     &:hover {
       filter: brightness(0.9);
-      transform: scale(1.01);
+      transform: scale(1.02);
       transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
     }
   }

@@ -2,27 +2,90 @@
 @import "../../Styles/mixins";
 @import "../../Styles/typography";
 
-.form {
-  height: 100%;
+.contact-form {
   margin: $toolbar-height auto 0 auto;
   max-width: $body-max-width;
   display: flex;
   flex-direction: column;
 
   &__wrapper {
-    width: 60%;
+    width: 90%;
+    max-width: 60rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 4rem;
+    padding: 2rem;
+
+    @include media(mob-lg) {
+      padding: 3rem;
+    }
+    @include media(tab-sm) {
+      width: 80%;
+      padding: 5rem;
+    }
+    @include media(tab-lg) {
+      padding: 7rem;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    position: relative;
+    font-size: 1.75rem;
+    font-family: $font-primary;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    &__textarea {
+      align-items: flex-start;
+    }
+
+    &__icon {
+      position: absolute;
+      margin-left: 1rem;
+      color: $color-form-icon;
+      line-height: 3rem;
+
+      &__textarea {
+        padding-top: 0.25rem;
+      }
+    }
+
+    &__field {
+      line-height: 3rem;
+      width: 100%;
+      padding-left: 4rem;
+      outline: none;
+      width: 100%;
+      box-shadow: 0.5rem 0.2rem 1rem rgba($color-secondary, 1);
+      font-size: 1.75rem;
+      border: 0.15rem $color-primary solid;
+      border-radius: 0.75rem;
+      transition: all 0.4s ease-in-out;
+
+      &:focus {
+        border: 0.25rem $color-primary solid;
+        background-color: $color-secondary;
+        font-weight: 500;
+        transition: all 0.4s ease-in-out;
+      }
+
+      &--textarea {
+        font-family: $font-primary;
+        font-size: 1.75rem;
+      }
+    }
   }
 
   &__errorMessage {
     color: $color-primary;
     color: rgb(236, 59, 59);
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 700;
     margin: -0.2rem;
+    padding: 0.25rem;
 
     &--ok {
       color: transparent;
@@ -39,43 +102,6 @@
 
     @include media(mob-lg) {
       width: 17rem;
-    }
-  }
-}
-
-.input {
-  width: 100%;
-  padding: 0.25rem;
-  position: relative;
-  font-size: 1.5rem;
-
-  &__icon {
-    position: absolute;
-    margin-left: 1rem;
-    top: 0.67rem;
-    color: $color-form-icon;
-  }
-
-  &__field {
-    font-family: $font-primary;
-    width: 100%;
-    outline: none;
-    width: 100%;
-    padding: 0.6rem 2rem 0.5rem 3.25rem;
-    box-shadow: 0.5rem 0.2rem 1rem rgba($color-secondary, 1);
-    font-size: 1.25rem;
-    border: 0.2rem $color-tertiary solid;
-    border-radius: 0.3rem;
-
-    &:focus {
-      border: 0.25rem $color-tertiary solid;
-      background-color: rgb(238, 238, 157);
-      font-weight: 500;
-    }
-
-    &--textarea {
-      font-family: $font-primary;
-      font-size: 1.25rem;
     }
   }
 }

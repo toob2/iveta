@@ -16,7 +16,6 @@ const footer = () => (
           <ul className="list">
             <li>ČAK: 145454</li>
             <li>IČ: 73222222222</li>
-            <li>DIČ: CZ123456784</li>
             <li>DATOVÁ SCHRÁNKA:</li>
             <li>
               <a
@@ -47,7 +46,7 @@ const footer = () => (
               </a>
             </li>
             <li>Pobřežní 78</li>
-            <li>Praha 8-Karlín</li>
+            <li>Praha 8 - Karlín</li>
             <li>186 00</li>
           </ul>
         </div>

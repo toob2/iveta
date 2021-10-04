@@ -74,17 +74,17 @@ const Form = (props) => {
     <form
       action=""
       id="form1"
-      className="form"
+      className="contact-form"
       onSubmit={handleSubmit(onSubmit)}
     >
-      <div className="form__wrapper">
+      <div className="contact-form__wrapper">
         {/* Name */}
-        <div className="input">
-          <div className="input__icon">
+        <div className="contact-form__input">
+          <div className="contact-form__input__icon">
             <FontAwesomeIcon icon={faUser} size="1x" />
           </div>
           <input
-            className="input__field"
+            className="contact-form__input__field"
             type="text"
             name="name"
             placeholder="Jméno"
@@ -103,18 +103,20 @@ const Form = (props) => {
         </div>
 
         {errors.name ? (
-          <span className="form__errorMessage">{errors.name.message}</span>
+          <span className="contact-form__errorMessage">
+            {errors.name.message}
+          </span>
         ) : (
-          <span className="form__errorMessage--ok">ok</span>
+          <span className="contact-form__errorMessage--ok">ok</span>
         )}
 
         {/* Email */}
-        <div className="input">
-          <div className="input__icon">
+        <div className="contact-form__input">
+          <div className="contact-form__input__icon">
             <FontAwesomeIcon icon={faEnvelope} size="1x" />
           </div>
           <input
-            className="input__field"
+            className="contact-form__input__field"
             type="text"
             name="email"
             placeholder="Email"
@@ -136,18 +138,20 @@ const Form = (props) => {
           />
         </div>
         {errors.email ? (
-          <span className="form__errorMessage">{errors.email.message}</span>
+          <span className="contact-form__errorMessage">
+            {errors.email.message}
+          </span>
         ) : (
-          <span className="form__errorMessage--ok">ok</span>
+          <span className="contact-form__errorMessage--ok">ok</span>
         )}
 
         {/* Phone */}
-        <div className="input">
-          <div className="input__icon">
+        <div className="contact-form__input">
+          <div className="contact-form__input__icon">
             <FontAwesomeIcon icon={faPhone} size="1x" />
           </div>
           <input
-            className="input__field"
+            className="contact-form__input__field"
             type="text"
             name="phone"
             placeholder="Kontaktní číslo"
@@ -162,22 +166,24 @@ const Form = (props) => {
               },
             })}
           />
-          <span className="input__icon"></span>
+          <span className="contact-form__input__icon"></span>
         </div>
 
         {errors.phone ? (
-          <span className="form__errorMessage">{errors.phone.message}</span>
+          <span className="contact-form__errorMessage">
+            {errors.phone.message}
+          </span>
         ) : (
-          <span className="form__errorMessage--ok">ok</span>
+          <span className="contact-form__errorMessage--ok">ok</span>
         )}
 
         {/* Subject */}
-        <div className="input">
-          <div className="input__icon">
+        <div className="contact-form__input">
+          <div className="contact-form__input__icon">
             <FontAwesomeIcon icon={faChevronRight} size="1x" />
           </div>
           <input
-            className="input__field"
+            className="contact-form__input__field"
             type="text"
             name="subject"
             placeholder="Předmět"
@@ -195,18 +201,20 @@ const Form = (props) => {
         </div>
 
         {errors.subject ? (
-          <span className="form__errorMessage">{errors.subject.message}</span>
+          <span className="contact-form__errorMessage">
+            {errors.subject.message}
+          </span>
         ) : (
-          <span className="form__errorMessage--ok">ok</span>
+          <span className="contact-form__errorMessage--ok">ok</span>
         )}
 
         {/* Textarea */}
-        <div className="input">
-          <div className="input__icon">
+        <div className="contact-form__input contact-form__input__textarea">
+          <div className="contact-form__input__icon contact-form__input__icon__textarea">
             <FontAwesomeIcon icon={faCommentDots} size="1x" />
           </div>
           <textarea
-            className="input__field input__field--textarea"
+            className="contact-form__input__field contact-form__input__field--textarea"
             id="textarea"
             placeholder="Zpráva"
             name="textarea"
@@ -219,15 +227,17 @@ const Form = (props) => {
               },
             })}
           ></textarea>
-          <span className="input__icon">
+          <span className="contact-form__input__icon">
             <i className="fas fa-comments"></i>
           </span>
         </div>
 
         {errors.textarea ? (
-          <span className="form__errorMessage">{errors.textarea.message}</span>
+          <span className="contact-form__errorMessage">
+            {errors.textarea.message}
+          </span>
         ) : (
-          <span className="form__errorMessage--ok">ok</span>
+          <span className="contact-form__errorMessage--ok">ok</span>
         )}
 
         <div className="form__toast-container">
@@ -235,7 +245,7 @@ const Form = (props) => {
         </div>
       </div>
       {/* Submit button */}
-      <div className="form__wrapper">
+      <div className="contact-form__wrapper">
         <div className="input">
           <input
             type="submit"
