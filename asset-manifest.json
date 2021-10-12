@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/iveta/static/css/main.cab9bba1.chunk.css",
-    "main.js": "/iveta/static/js/main.9129108a.chunk.js",
-    "main.js.map": "/iveta/static/js/main.9129108a.chunk.js.map",
+    "main.js": "/iveta/static/js/main.52652418.chunk.js",
+    "main.js.map": "/iveta/static/js/main.52652418.chunk.js.map",
     "runtime-main.js": "/iveta/static/js/runtime-main.992c1820.js",
     "runtime-main.js.map": "/iveta/static/js/runtime-main.992c1820.js.map",
     "static/css/2.c7c62aa4.chunk.css": "/iveta/static/css/2.c7c62aa4.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.c7c62aa4.chunk.css",
     "static/js/2.5f66211e.chunk.js",
     "static/css/main.cab9bba1.chunk.css",
-    "static/js/main.9129108a.chunk.js"
+    "static/js/main.52652418.chunk.js"
   ]
 }
