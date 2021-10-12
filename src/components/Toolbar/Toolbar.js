@@ -1,6 +1,5 @@
 import React from "react";
 import { HashLink as Link } from "react-router-hash-link";
-
 import "./Toolbar.scss";
 import DrawerToggleButton from "../SideDrawer/DrawerToggleButton";
 
