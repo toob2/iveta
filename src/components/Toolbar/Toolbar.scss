@@ -1,7 +1,7 @@
 @import "../../Styles/colors";
 @import "../../Styles/typography";
 @import "../../Styles/mixins";
-
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 .toolbar {
   z-index: 100;
   width: 100%;
@@ -22,18 +22,47 @@
   }
 
   &__logo {
+    //  margin-top: 5rem;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: start;
+    font-family: "Pacifico", cursive;
+    color: $color-secondary;
+
+    &-link {
+      text-decoration: none;
+    }
+    &-top {
+      flex-grow: 1;
+      height: $toolbar-height * 0.25;
+      font-size: $toolbar-height * 0.25;
+      -webkit-transform: scaleX(3.5);
+      transform: scaleX(3.5);
+    }
+    &-middle {
+      flex-grow: 2;
+      height: $toolbar-height * 0.4;
+      font-size: $toolbar-height * 0.4;
+    }
+    &-bottom {
+      margin-top: 1.75rem;
+      flex-grow: 1;
+      height: $toolbar-height * 0.25;
+      font-size: $toolbar-height * 0.25;
+      transform: rotate(-180deg) scaleX(3.5);
+      -webkit-transform: rotate(-180deg) scaleX(3.5);
+    }
+
     a {
+      height: $toolbar-height;
       color: $color-secondary;
       text-decoration: none;
       &:active {
         color: $color-tertiary;
       }
-    }
-    img {
-      height: $toolbar-height * 0.75;
-      width: $toolbar-height * 0.65;
-      color: white;
-      margin-left: -0.75rem;
     }
   }
 

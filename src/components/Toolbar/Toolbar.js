@@ -17,11 +17,13 @@ const scrollWithOffset = (el, offset) => {
 const toolbar = (props) => (
   <header className="toolbar">
     <nav className="toolbar__navigation">
-      <div className="toolbar__logo">
-        <a href="/">
-          <img src={logo} />
-        </a>
-      </div>
+      <a href="/" className="toolbar__logo-link">
+        <div className="toolbar__logo">
+          <div className="toolbar__logo-top">^</div>
+          <div className="toolbar__logo-middle">IS</div>
+          <div className="toolbar__logo-bottom">^</div>
+        </div>
+      </a>
       <div className="spacer" />
       <div className="toolbar__navigation-items">
         <ul>
