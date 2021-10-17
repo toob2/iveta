@@ -22,13 +22,21 @@
   }
 
   &__logo {
+    max-height: $toolbar-height;
+
     a {
       color: $color-secondary;
       text-decoration: none;
-      font-size: 2.75rem;
+      //font-size: 2.75rem;
       &:active {
         color: $color-tertiary;
       }
+    }
+
+    img {
+      max-height: 4rem;
+      width: 3rem;
+      color: white;
     }
   }
 

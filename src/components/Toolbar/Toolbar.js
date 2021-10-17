@@ -2,6 +2,7 @@ import React from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import "./Toolbar.scss";
 import DrawerToggleButton from "../SideDrawer/DrawerToggleButton";
+import logo from "../Images/logo.png";
 
 /**
  * Scroll with an offset
@@ -17,7 +18,9 @@ const toolbar = (props) => (
   <header className="toolbar">
     <nav className="toolbar__navigation">
       <div className="toolbar__logo">
-        <a href="/">$YT</a>
+        <a href="/">
+          <img src={logo} />
+        </a>
       </div>
       <div className="spacer" />
       <div className="toolbar__navigation-items">
