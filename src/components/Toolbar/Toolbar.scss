@@ -11,6 +11,10 @@
   background: $color-primary;
   height: $toolbar-height;
 
+  &-scroll {
+    background: yellow;
+  }
+
   &__navigation {
     margin: auto;
     width: 100%;
@@ -27,7 +31,7 @@
       display: block;
       padding: 0.25rem 0;
       height: $toolbar-height;
-      width: $toolbar-height / 2;
+      width: $toolbar-height / 1.35;
     }
     g {
       fill: $color-secondary;
