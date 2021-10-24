@@ -10,9 +10,18 @@
   left: 0;
   background: $color-primary;
   height: $toolbar-height;
+  transition: ease-in-out 0.5s;
 
   &-scroll {
-    background: yellow;
+    z-index: 100;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background:  transparent;
+    height: $toolbar-height * $scroll-size;
+    transition: ease-in-out 0.5s;
+
   }
 
   &__navigation {
@@ -27,14 +36,23 @@
 
   &__logo {
     margin-left: -0.5rem;
-    svg {
+    &__svg {
       display: block;
       padding: 0.25rem 0;
       height: $toolbar-height;
       width: $toolbar-height / 1.35;
+      transition: ease-in-out 0.5s;
+      &-scroll {
+          height: $toolbar-height * $scroll-size;;
+          width: $toolbar-height / 1.35 * $scroll-size;
+          transition: ease-in-out 0.5s;
+        }
     }
-    g {
+    &__g {
       fill: $color-secondary;
+      &-scroll { 
+        fill: $color-primary;
+      }
     }
     &-link {
       max-height: $toolbar-height;
@@ -68,6 +86,9 @@
         color: $color-tertiary;
         text-decoration: none;
       }
+      &-scroll { 
+        color: $color-primary;
+      }
     }
   }
 }
@@ -99,5 +120,10 @@
 @media (max-width: 768px) {
   .toolbar__navigation-items {
     display: none;
+  }
+  .toolbar__toggle-button {
+    &-scroll { 
+      color: $color-primary;
+    }
   }
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import "./DrawerToggleButton.scss";
 
-const drawerToggleButton = (props) => {
+const DrawerToggleButton = (props) => {
   let burgerClasses = "toggler__burger";
   if (props.show) {
     burgerClasses = "toggler__burger toggler__burger-active";
@@ -16,4 +16,4 @@ const drawerToggleButton = (props) => {
   );
 };
 
-export default drawerToggleButton;
+export default DrawerToggleButton;

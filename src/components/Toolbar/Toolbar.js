@@ -13,29 +13,27 @@ const scrollWithOffset = (el, offset) => {
   window.scrollTo({ top: yCoordinate + offset, behavior: "smooth" });
 };
 
-const toolbar = (props) => {
-  const [header, setHeader] = useState();
+const Toolbar = (props) => {
+  const [scroll, setClass] = useState(false);
+    const listenScrollEvent = (event) => {
+      if (window.scrollY < 100) {
+        return setClass(scroll);
+      } else if (window.scrollY > 110) {
+        return setClass(!scroll);
+      }
+    };
 
-  //   const listenScrollEvent = (event) => {
-  //     if (window.scrollY < 73) {
-  //       return setHeader("header");
-  //     } else if (window.scrollY > 70) {
-  //       return setHeader("header2");
-  //     }
-  //   };
-
-  //   useEffect(() => {
-  //     window.addEventListener("scroll", listenScrollEvent);
-
-  //     return () => window.removeEventListener("scroll", listenScrollEvent);
-  //   }, []);
+    useEffect(() => {
+      window.addEventListener("scroll", listenScrollEvent);
+      return () => window.removeEventListener("scroll", listenScrollEvent);
+    }, []);
 
   return (
-    <header className={header}>
+    <header className={`toolbar${scroll ? "-scroll" : ""}`}>
       <nav className="toolbar__navigation">
         <a href="/" className="toolbar__logo-link">
           <div className="toolbar__logo">
-            <svg
+            <svg className={`toolbar__logo__svg${scroll ? "-scroll" : ""}`}
               version="1.0"
               xmlns="http://www.w3.org/2000/svg"
               width="882.000000pt"
@@ -43,7 +41,7 @@ const toolbar = (props) => {
               viewBox="0 0 882.000000 897.000000"
               preserveAspectRatio="xMidYMid meet"
             >
-              <g
+              <g className={`toolbar__logo__g${scroll ? "-scroll" : ""}`}
                 transform="translate(0.000000,897.000000) scale(0.100000,-0.100000)"
                 fill="#000000"
                 stroke="none"
@@ -85,7 +83,8 @@ const toolbar = (props) => {
         <div className="toolbar__navigation-items">
           <ul>
             <li>
-              <Link className="nav-underline" smooth to="/#">
+              <Link className="nav-underline nav-link" 
+                    smooth to="/#">
                 ÚVOD
               </Link>
             </li>
@@ -126,4 +125,4 @@ const toolbar = (props) => {
     </header>
   );
 };
-export default toolbar;
+export default Toolbar;
