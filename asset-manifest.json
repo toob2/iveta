@@ -1,25 +1,24 @@
 {
   "files": {
-    "main.css": "/iveta/static/css/main.8d906f79.chunk.css",
-    "main.js": "/iveta/static/js/main.f0a66212.chunk.js",
-    "main.js.map": "/iveta/static/js/main.f0a66212.chunk.js.map",
+    "main.css": "/iveta/static/css/main.21c764b9.chunk.css",
+    "main.js": "/iveta/static/js/main.bf8c2875.chunk.js",
+    "main.js.map": "/iveta/static/js/main.bf8c2875.chunk.js.map",
     "runtime-main.js": "/iveta/static/js/runtime-main.992c1820.js",
     "runtime-main.js.map": "/iveta/static/js/runtime-main.992c1820.js.map",
     "static/css/2.c7c62aa4.chunk.css": "/iveta/static/css/2.c7c62aa4.chunk.css",
-    "static/js/2.6cc543de.chunk.js": "/iveta/static/js/2.6cc543de.chunk.js",
-    "static/js/2.6cc543de.chunk.js.map": "/iveta/static/js/2.6cc543de.chunk.js.map",
+    "static/js/2.6899b3ed.chunk.js": "/iveta/static/js/2.6899b3ed.chunk.js",
+    "static/js/2.6899b3ed.chunk.js.map": "/iveta/static/js/2.6899b3ed.chunk.js.map",
     "index.html": "/iveta/index.html",
     "static/css/2.c7c62aa4.chunk.css.map": "/iveta/static/css/2.c7c62aa4.chunk.css.map",
-    "static/css/main.8d906f79.chunk.css.map": "/iveta/static/css/main.8d906f79.chunk.css.map",
-    "static/js/2.6cc543de.chunk.js.LICENSE.txt": "/iveta/static/js/2.6cc543de.chunk.js.LICENSE.txt",
-    "static/media/Contact.scss": "/iveta/static/media/contact.83d905c3.jpeg",
+    "static/css/main.21c764b9.chunk.css.map": "/iveta/static/css/main.21c764b9.chunk.css.map",
+    "static/js/2.6899b3ed.chunk.js.LICENSE.txt": "/iveta/static/js/2.6899b3ed.chunk.js.LICENSE.txt",
     "static/media/Landing.scss": "/iveta/static/media/prague.f4c7f8f5.jpeg"
   },
   "entrypoints": [
     "static/js/runtime-main.992c1820.js",
     "static/css/2.c7c62aa4.chunk.css",
-    "static/js/2.6cc543de.chunk.js",
-    "static/css/main.8d906f79.chunk.css",
-    "static/js/main.f0a66212.chunk.js"
+    "static/js/2.6899b3ed.chunk.js",
+    "static/css/main.21c764b9.chunk.css",
+    "static/js/main.bf8c2875.chunk.js"
   ]
 }
