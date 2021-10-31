@@ -1,0 +1,64 @@
+@import "../../Styles/colors";
+@import "../../Styles/typography";
+
+.toggler {
+   width: 3.5rem;
+   height: 3rem;
+   cursor: pointer;
+   text-decoration: none;
+
+   &__wrapper {
+      position: absolute;
+      height: 3rem;
+      width: 3.5rem;
+   }
+
+   &__burger {
+      content: "";
+      position: absolute;
+      height: 0.2rem;
+      width: 3.5rem;
+      background-color: $color-secondary;
+      top: 1.5rem;
+      cursor: pointer;
+      transition: all 275ms ease-in-out;
+
+      &-scroll {
+         transform: scale(0.85);
+      }
+
+      &::before {
+         content: "";
+         position: absolute;
+         height: inherit;
+         width: inherit;
+         background-color: $color-secondary;
+         top: -0.9rem;
+         transition: all 275ms ease-in-out;
+      }
+
+      &::after {
+         content: "";
+         position: absolute;
+         height: inherit;
+         width: inherit;
+         background-color: $color-secondary;
+         bottom: -0.9rem;
+         transition: all 275ms ease-in-out;
+      }
+   }
+
+   &__burger-active {
+      background-color: transparent;
+      &::before,
+      &::after {
+         top: 0;
+      }
+      &::before {
+         transform: rotate(45deg);
+      }
+      &::after {
+         transform: rotate(-45deg);
+      }
+   }
+}

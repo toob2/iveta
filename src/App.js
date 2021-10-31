@@ -16,73 +16,59 @@ import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 class App extends Component {
-  state = {
-    sideDrawerOpen: false,
-  };
+   state = {
+      sideDrawerOpen: false,
+   };
 
-  drawerToggleClickHandler = () => {
-    this.setState((prevState) => {
-      return {
-        sideDrawerOpen: !prevState.sideDrawerOpen,
-      };
-    });
-  };
+   drawerToggleClickHandler = () => {
+      this.setState((prevState) => {
+         return {
+            sideDrawerOpen: !prevState.sideDrawerOpen,
+         };
+      });
+   };
 
-  backdropClickHandler = () => {
-    this.setState({ sideDrawerOpen: false });
-  };
+   backdropClickHandler = () => {
+      this.setState({ sideDrawerOpen: false });
+   };
 
-  render() {
-    let backdrop;
+   render() {
+      let backdrop;
 
-    if (this.state.sideDrawerOpen) {
-      backdrop = <BackDrop click={this.backdropClickHandler} />;
-    }
-    return (
-      <div className="App">
-        <Router>
-          <Toolbar
-            drawerClickHandler={this.drawerToggleClickHandler}
-            show={this.state.sideDrawerOpen}
-          />
-          <SideDrawer
-            show={this.state.sideDrawerOpen}
-            click={this.backdropClickHandler}
-          />
-          {backdrop}
-          <Switch>
-            <Route path="/contact" component={Contact}>
-              <Contact />
-            </Route>
-            <Route path="/">
-              <Landing />
-              <Services />
-            </Route>
-          </Switch>
-          <Footer />
-        </Router>
-
-        {/* <ScrollUpButton
-          ContainerClassName="AnyClassForContainer"
-          TransitionClassName="AnyClassForTransition"
-          EasingType="easeInOutCubic"
-          StopPosition={8}
-          ShowAtPosition={200}
-          AnimationDuration={600}
-        >
-          <FontAwesomeIcon icon={faChevronUp} size="2x" />
-        </ScrollUpButton> */}
-        <ScrollUpButton
-          style={{ width: 40, height: 40 }}
-          ToggledStyle={{ right: 10, bottom: 20 }}
-          EasingType="easeInOutQuad"
-          StopPosition={0}
-          ShowAtPosition={300}
-          AnimationDuration={500}
-        />
-      </div>
-    );
-  }
+      if (this.state.sideDrawerOpen) {
+         backdrop = <BackDrop click={this.backdropClickHandler} />;
+      }
+      return (
+         <div className="App">
+            <Router>
+               <Toolbar
+                  drawerClickHandler={this.drawerToggleClickHandler}
+                  show={this.state.sideDrawerOpen}
+               />
+               <SideDrawer show={this.state.sideDrawerOpen} click={this.backdropClickHandler} />
+               {backdrop}
+               <Switch>
+                  <Route path="/kontakt" component={Contact}>
+                     <Contact />
+                  </Route>
+                  <Route path="/">
+                     <Landing />
+                     <Services />
+                  </Route>
+               </Switch>
+               <Footer />
+            </Router>
+            <ScrollUpButton
+               style={{ width: 35, height: 35 }}
+               ToggledStyle={{ right: 10, bottom: 20 }}
+               EasingType="easeInSine"
+               //  StopPosition={}
+               ShowAtPosition={300}
+               AnimationDuration={500}
+            />
+         </div>
+      );
+   }
 }
 
 export default App;

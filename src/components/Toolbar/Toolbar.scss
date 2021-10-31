@@ -3,127 +3,120 @@
 @import "../../Styles/mixins";
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 .toolbar {
-  z-index: 100;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: $color-primary;
-  height: $toolbar-height;
-  transition: ease-in-out 0.5s;
+   z-index: 100;
+   width: 100%;
+   position: fixed;
+   top: 0;
+   left: 0;
+   background: $color-primary;
+   box-shadow: 0 4px 4px -3px black;
+   height: $toolbar-height;
+   transition: ease-in-out 0.5s;
 
-  &-scroll {
-    z-index: 100;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background:  transparent;
-    height: $toolbar-height * $scroll-size;
-    transition: ease-in-out 0.5s;
-
-  }
-
-  &__navigation {
-    margin: auto;
-    width: 100%;
-    max-width: $body-max-width;
-    display: flex;
-    align-items: center;
-    height: 100%;
-    padding: 0 1.5rem;
-  }
-
-  &__logo {
-    margin-left: -0.5rem;
-    &__svg {
-      display: block;
-      padding: 0.25rem 0;
-      height: $toolbar-height;
-      width: $toolbar-height / 1.35;
+   &-scroll {
+      height: $toolbar-height * $scroll-size;
       transition: ease-in-out 0.5s;
-      &-scroll {
-          height: $toolbar-height * $scroll-size;;
-          width: $toolbar-height / 1.35 * $scroll-size;
-          transition: ease-in-out 0.5s;
-        }
-    }
-    &__g {
-      fill: $color-secondary;
-      &-scroll { 
-        fill: $color-primary;
-      }
-    }
-    &-link {
-      max-height: $toolbar-height;
-    }
-  }
-  &__navigation-items {
-    font-size: $font-size-navbar;
+   }
 
-    ul {
-      flex: 1 1 auto;
-      list-style: none;
-      margin: 0;
-      padding: 0;
+   &__navigation {
+      margin: auto;
+      width: 100%;
+      max-width: $body-max-width;
       display: flex;
-    }
+      align-items: center;
+      height: 100%;
+      padding: 0 1.5rem;
+   }
 
-    li {
-      padding: 0 1rem;
-    }
-
-    li:not(:first-child) {
-      border-left: solid 1px $color-secondary;
-    }
-
-    a {
-      color: $color-secondary;
-      text-decoration: none;
-      font-weight: 500;
-      &:hover,
-      &:active {
-        color: $color-tertiary;
-        text-decoration: none;
+   &__logo {
+      margin-left: -0.5rem;
+      &__svg {
+         display: block;
+         padding: 0.25rem 0;
+         height: $toolbar-height;
+         width: $toolbar-height / 1.35;
+         transition: ease-in-out 0.5s;
+         &-scroll {
+            height: $toolbar-height * $scroll-size;
+            width: $toolbar-height / 1.35 * $scroll-size;
+            transition: ease-in-out 0.5s;
+         }
       }
-      &-scroll { 
-        color: $color-primary;
+      &__g {
+         fill: $color-secondary;
+         &-scroll {
+            fill: $color-secondary;
+         }
       }
-    }
-  }
+      &-link {
+         max-height: $toolbar-height;
+      }
+   }
+   &__navigation-items {
+      font-size: $font-size-navbar;
+
+      ul {
+         flex: 1 1 auto;
+         list-style: none;
+         margin: 0;
+         padding: 0;
+         display: flex;
+      }
+
+      li {
+         padding: 0 1rem;
+      }
+
+      li:not(:first-child) {
+         border-left: solid 1px $color-secondary;
+      }
+
+      a {
+         color: $color-secondary;
+         text-decoration: none;
+         font-weight: 500;
+         &:hover,
+         &:active {
+            color: $color-tertiary;
+            text-decoration: none;
+         }
+         &-scroll {
+            color: $color-primary;
+         }
+      }
+   }
 }
 
 .spacer {
-  flex: 1;
+   flex: 1;
 }
 
 .nav-underline {
-  padding-bottom: 0.4rem;
-  background: linear-gradient(currentColor 0 0) bottom / var(--d, 0) 3px
-    no-repeat;
-  transition: 0.5s;
+   padding-bottom: 0.4rem;
+   background: linear-gradient(currentColor 0 0) bottom / var(--d, 0) 3px no-repeat;
+   transition: 0.5s;
 }
 .nav-underline:hover {
-  --d: 100%;
+   --d: 100%;
 }
 
 @media (min-width: 769px) {
-  .toolbar__toggle-button {
-    display: none;
-  }
+   .toolbar__toggle-button {
+      display: none;
+   }
 
-  .toolbar__logo {
-    margin-left: 1rem;
-  }
+   .toolbar__logo {
+      margin-left: 1rem;
+   }
 }
 
 @media (max-width: 768px) {
-  .toolbar__navigation-items {
-    display: none;
-  }
-  .toolbar__toggle-button {
-    &-scroll { 
-      color: $color-primary;
-    }
-  }
+   .toolbar__navigation-items {
+      display: none;
+   }
+   .toolbar__toggle-button {
+      &-scroll {
+         color: $color-primary;
+      }
+   }
 }

@@ -1,0 +1,92 @@
+@import "../../Styles/colors";
+@import "../../Styles/mixins";
+@import "../../Styles/typography";
+
+.contact-card {
+   padding: 3rem;
+   flex-direction: column;
+   width: 100%;
+   &--heading {
+      font-size: 3rem;
+      font-weight: 600;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      &__box {
+         width: 1.5rem;
+         height: 3rem;
+         margin-right: 0.75rem;
+         background-color: $color-primary;
+      }
+      &__hr {
+         width: $hr-width;
+         max-width: 40%;
+         margin: 2rem auto;
+         @include media(mob-lg) {
+            max-width: 45%;
+         }
+         @include media(tab-lg) {
+            max-width: 20%;
+         }
+      }
+   }
+   &--body {
+      display: flex;
+      flex-direction: column;
+      align-self: left;
+
+      &__box {
+         width: 4rem;
+         height: 0.25rem;
+         margin: 1rem 0;
+         background-color: $color-primary;
+      }
+
+      &-header {
+         font-size: 1.75rem;
+         font-weight: 500;
+      }
+
+      &-title {
+         font-size: 1.5rem;
+         font-weight: 500;
+         display: flex;
+         align-items: center;
+         justify-content: flex-start;
+         padding-bottom: 0.75rem;
+         span {
+            font-weight: normal;
+         }
+         a {
+            font-weight: normal;
+            color: inherit;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            &:active,
+            &:hover {
+               color: $color-tertiary;
+            }
+         }
+      }
+   }
+}
+
+.icon-wrapper {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   padding-right: 1rem;
+   // width: 2rem;
+   &-icon {
+      color: $color-primary;
+      font-size: 3rem;
+      &-top {
+         position: absolute;
+         color: $color-secondary;
+         font-size: 1.5rem;
+      }
+   }
+}

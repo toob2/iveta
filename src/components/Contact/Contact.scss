@@ -1,21 +1,64 @@
 @import "../../Styles/colors";
 @import "../../Styles/typography";
+@import "../../Styles/mixins";
 
 .contact {
-  height: 100%;
-  width: 100%;
-  z-index: -100;
+   height: 100%;
+   width: 100%;
+   padding: 0 2rem;
+   &__heading {
+      margin-top: 2rem;
+      padding-top: 3rem;
+      font-size: $font-size-heading;
+      font-weight: 600;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      &__box {
+         width: 1.5rem;
+         height: $font-size-heading;
+         margin-right: 0.75rem;
+         background-color: $color-primary;
+      }
+      &__hr {
+         width: $hr-width;
+         max-width: 40%;
+         margin: 3rem auto;
+         @include media(mob-lg) {
+            max-width: 45%;
+         }
+         @include media(tab-lg) {
+            max-width: 20%;
+         }
+      }
+   }
 }
 
 .contact-details {
-  min-height: 50rem;
-  background-image: url(../Images/contact.jpeg);
-  background-size: cover;
-  background-position: 0 $toolbar-height;
-  background-repeat: no-repeat;
-  padding: 1rem;
+   // min-height: 50rem;
+   // background-image: url(../Images/contact.jpeg);
+   background-size: cover;
+   background-position: 0 0;
+   background-repeat: no-repeat;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   // @include media(tab-lg) {
+   //    flex-direction: row;
+   //    justify-content: start;
+   // }
+   // @include media(tab-lg-lan) {
+   //    flex-direction: row;
+   //    justify-content: start;
+   // }
 }
 
 .contact-map {
-  height: 40vh;
+   height: 50vh;
+}
+
+.top-padder {
+   padding-top: $toolbar-height + 2rem;
 }

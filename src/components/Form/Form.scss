@@ -3,137 +3,162 @@
 @import "../../Styles/typography";
 
 .contact-form {
-  margin: $toolbar-height auto 0 auto;
-  max-width: $body-max-width;
-  display: flex;
-  flex-direction: column;
+   width: 100%;
+   max-width: $body-max-width;
 
-  &__wrapper {
-    width: 90%;
-    max-width: 60rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
+   &__heading {
+      margin-top: 2rem;
+      padding-top: 3rem;
+      font-size: $font-size-heading;
+      font-weight: 600;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
 
-    @include media(mob-lg) {
-      padding: 3rem;
-    }
-    @include media(tab-sm) {
-      width: 80%;
-      padding: 5rem;
-    }
-    @include media(tab-lg) {
-      padding: 7rem;
-    }
-  }
+      &__box {
+         width: 1.5rem;
+         height: $font-size-heading;
+         margin-right: 0.75rem;
+         background-color: $color-primary;
+      }
+      &__hr {
+         width: $hr-width;
+         max-width: 40%;
+         margin: 3rem auto;
+         @include media(mob-lg) {
+            max-width: 45%;
+         }
+         @include media(tab-lg) {
+            max-width: 20%;
+         }
+      }
+   }
 
-  &__input {
-    width: 100%;
-    position: relative;
-    font-size: 1.75rem;
-    font-family: $font-primary;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+   &__wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      // padding: 2rem;
 
-    &__textarea {
-      align-items: flex-start;
-    }
+      // @include media(mob-lg) {
+      //    padding: 3rem;
+      // }
+      // @include media(tab-sm) {
+      //    width: 80%;
+      //    padding: 5rem;
+      // }
+      // @include media(tab-lg) {
+      //    padding: 7rem;
+      // }
+   }
 
-    &__icon {
-      position: absolute;
-      margin-left: 1rem;
-      color: $color-form-icon;
-      line-height: 3rem;
+   &__input {
+      width: 100%;
+      position: relative;
+      font-size: 1.75rem;
+      font-family: $font-primary;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
 
       &__textarea {
-        padding-top: 0.25rem;
-      }
-    }
-
-    &__field {
-      line-height: 3rem;
-      width: 100%;
-      padding-left: 4rem;
-      outline: none;
-      width: 100%;
-      box-shadow: 0.5rem 0.2rem 1rem rgba($color-secondary, 1);
-      font-size: 1.75rem;
-      border: 0.15rem $color-primary solid;
-      border-radius: 0.75rem;
-      transition: all 0.4s ease-in-out;
-
-      &:focus {
-        border: 0.25rem $color-primary solid;
-        background-color: $color-secondary;
-        font-weight: 500;
-        transition: all 0.4s ease-in-out;
+         align-items: flex-start;
       }
 
-      &--textarea {
-        font-family: $font-primary;
-        font-size: 1.75rem;
+      &__icon {
+         position: absolute;
+         margin-left: 1rem;
+         color: $color-form-icon;
+         line-height: 3rem;
+
+         &__textarea {
+            padding-top: 0.25rem;
+         }
       }
-    }
-  }
 
-  &__errorMessage {
-    color: $color-primary;
-    color: rgb(236, 59, 59);
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin: -0.2rem;
-    padding: 0.25rem;
+      &__field {
+         line-height: 3rem;
+         width: 100%;
+         padding-left: 4rem;
+         outline: none;
+         width: 100%;
+         box-shadow: 0.5rem 0.2rem 1rem rgba($color-secondary, 1);
+         font-size: 1.75rem;
+         border: 0.15rem $color-primary solid;
+         border-radius: 0.75rem;
+         transition: all 0.4s ease-in-out;
 
-    &--ok {
-      color: transparent;
-      font-size: 1rem;
+         &:focus {
+            border: 0.25rem $color-primary solid;
+            background-color: $color-secondary;
+            font-weight: 500;
+            transition: all 0.4s ease-in-out;
+         }
+
+         &--textarea {
+            font-family: $font-primary;
+            font-size: 1.75rem;
+         }
+      }
+   }
+
+   &__errorMessage {
+      color: $color-primary;
+      color: rgb(236, 59, 59);
+      font-size: 1.25rem;
       font-weight: 700;
       margin: -0.2rem;
-    }
-  }
+      padding: 0.25rem;
 
-  &__toast {
-    margin-top: $toolbar-height;
-    background-color: $color-success !important;
-    color: $color-secondary !important;
+      &--ok {
+         color: transparent;
+         font-size: 1rem;
+         font-weight: 700;
+         margin: -0.2rem;
+      }
+   }
 
-    @include media(mob-lg) {
-      width: 17rem;
-    }
-  }
+   &__toast {
+      margin-top: $toolbar-height;
+      background-color: $color-success !important;
+      color: $color-secondary !important;
+
+      @include media(mob-lg) {
+         width: 17rem;
+      }
+   }
 }
 
 .btn--submit {
-  display: inline-block;
-  text-transform: uppercase;
-  text-decoration: none;
-  border-radius: 2rem;
-  align-self: center;
-  font-size: 1.25rem;
-  padding: 1.25rem 2rem;
-  background-color: $color-primary;
-  color: $color-secondary;
-  font-weight: 500;
-  box-shadow: 1rem 1rem 3rem rgba(black, 0.45);
-  transition: all 0.25s ease-in-out;
-  -webkit-appearance: none;
+   display: inline-block;
+   text-transform: uppercase;
+   text-decoration: none;
+   border-radius: 2rem;
+   align-self: center;
+   font-size: 1.25rem;
+   padding: 1.25rem 2rem;
+   background-color: $color-primary;
+   color: $color-secondary;
+   font-weight: 500;
+   box-shadow: 1rem 1rem 3rem rgba(black, 0.45);
+   transition: all 0.25s ease-in-out;
+   -webkit-appearance: none;
 
-  &:hover {
-    transform: translateY(0.15rem);
-    box-shadow: 0.75rem 0.75rem 1.75rem rgba(black, 0.45);
-    background-color: darken($color-primary, 10%);
-  }
+   &:hover {
+      transform: translateY(0.15rem);
+      box-shadow: 0.75rem 0.75rem 1.75rem rgba(black, 0.45);
+      background-color: darken($color-primary, 10%);
+   }
 
-  &:active {
-    transform: translateY(0.25rem);
-    box-shadow: 0.6rem 0.6rem 1.75rem rgba(black, 0.45);
-    outline: none;
-  }
+   &:active {
+      transform: translateY(0.25rem);
+      box-shadow: 0.6rem 0.6rem 1.75rem rgba(black, 0.45);
+      outline: none;
+   }
 }
 
 .Toastify__toast-container--top-right {
-  right: -10rem !important;
+   right: -10rem !important;
 }

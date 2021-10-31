@@ -3,84 +3,83 @@
 @import "../../Styles/typography";
 
 .main-footer {
-  height: 100%;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  color: $color-secondary;
-  background: $color-primary;
-  padding: 0.5rem 0;
+   height: 100%;
+   width: 100%;
+   bottom: 0;
+   left: 0;
+   color: $color-secondary;
+   background: $color-primary;
+   padding: 0.5rem 0;
 
-  &__wrapper {
-    width: 100%;
-    margin: auto;
-    min-height: 10rem;
-    max-width: $body-max-width;
-  }
+   &__wrapper {
+      width: 100%;
+      margin: auto;
+      min-height: 10rem;
+      max-width: $body-max-width;
+   }
 
-  &__heading {
-    font-size: $font-size-default * 1.25;
-    padding: 0.5rem 0;
-  }
+   &__heading {
+      font-size: $font-size-default * 1.25;
+      padding: 0.5rem 0;
+   }
 
-  &__hr {
-    background-color: $color-secondary;
-    height: 0.15rem;
-    border: 0;
-    margin-bottom: 0.5rem;
-  }
+   &__hr {
+      background-color: $color-secondary;
+      height: 0.15rem;
+      border: 0;
+      margin-bottom: 0.5rem;
+   }
 
-  &__link {
-    font-weight: 600;
-    color: $color-secondary;
-    text-decoration: none;
-    transition: 0.5s ease;
-    &:active,
-    &:hover {
-      color: $color-tertiary;
-    }
-  }
+   &__link {
+      font-weight: 600;
+      color: $color-secondary;
+      text-decoration: none;
+      transition: 0.5s ease;
+      &:active,
+      &:hover {
+         color: $color-tertiary;
+      }
+   }
 
-  .row {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem 0;
-
-    @include media(mob-med) {
+   .row {
+      width: 100%;
       display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      justify-content: space-evenly;
-    }
-  }
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 0;
 
-  .col {
-    width: 100%;
-    min-height: 10rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+      @include media(mob-med) {
+         display: flex;
+         flex-direction: row;
+         align-items: flex-start;
+         justify-content: space-evenly;
+      }
+   }
 
-    align-items: center;
-    margin: 1rem 0;
-  }
+   .col {
+      width: 100%;
+      min-height: 10rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 1rem 0;
+   }
 
-  .list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    list-style: none;
-    font-size: 1.25rem;
+   .list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      list-style: none;
+      font-size: 1.25rem;
 
-    li {
-      padding: 0.1rem;
-    }
-  }
+      li {
+         padding: 0.1rem;
+      }
+   }
 }
 
 .made_by {
-  font-size: 1.25rem;
+   font-size: 1.25rem;
 }
