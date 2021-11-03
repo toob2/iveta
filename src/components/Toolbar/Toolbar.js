@@ -29,8 +29,10 @@ const Toolbar = (props) => {
    };
 
    let isDark = false;
-   if (window.location.pathname === "/kontakt") {
+   if (window.location.pathname === "/kontakt" || window.location.pathname === "/o-nas") {
       isDark = true;
+   } else {
+      isDark = false;
    }
 
    useEffect(() => {
@@ -93,7 +95,6 @@ const Toolbar = (props) => {
                   </svg>
                </div>
             </a>
-
             <div className="spacer" />
             <div className="toolbar__navigation-items">
                <ul>
@@ -106,20 +107,15 @@ const Toolbar = (props) => {
                      <Link
                         className="nav-underline"
                         smooth
-                        to="/#o-mne"
-                        scroll={(el) => scrollWithOffset(el, -30)}
+                        to="/#pravni-sluzby"
+                        scroll={(el) => scrollWithOffset(el, -10)}
                      >
-                        O MNĚ
+                        PRÁVNÍ SLUŽBY
                      </Link>
                   </li>
                   <li>
-                     <Link
-                        className="nav-underline"
-                        smooth
-                        to="/#pravni-sluzby"
-                        scroll={(el) => scrollWithOffset(el, -70)}
-                     >
-                        PRÁVNÍ SLUŽBY
+                     <Link className="nav-underline" to="/o-nas#">
+                        O NÁS
                      </Link>
                   </li>
                   <li>

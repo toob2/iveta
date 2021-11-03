@@ -64,15 +64,15 @@ const SideDrawer = (props) => {
             <Link
                className="side-drawer__item"
                smooth
-               to="/#o-mne"
-               scroll={(el) => scrollWithOffset(el, -20)}
+               to="/#pravni-sluzby"
+               scroll={(el) => scrollWithOffset(el, -10)}
                onClick={props.click}
-               onMouseEnter={toggleAbout}
-               onMouseLeave={toggleAbout}
+               onMouseEnter={toggleServices}
+               onMouseLeave={toggleServices}
             >
-               O MNĚ
+               PRÁVNÍ SLUŽBY
                <FontAwesomeIcon
-                  className={`side-drawer__item-icon${aboutActive ? "-active" : ""}`}
+                  className={`side-drawer__item-icon${servicesActive ? "-active" : ""}`}
                   icon={faChevronRight}
                   size="2x"
                />
@@ -81,15 +81,15 @@ const SideDrawer = (props) => {
             <Link
                className="side-drawer__item"
                smooth
-               to="/#pravni-sluzby"
-               scroll={(el) => scrollWithOffset(el, -80)}
+               to="/o-nas#"
+               // scroll={(el) => scrollWithOffset(el, -10)}
                onClick={props.click}
-               onMouseEnter={toggleServices}
-               onMouseLeave={toggleServices}
+               onMouseEnter={toggleAbout}
+               onMouseLeave={toggleAbout}
             >
-               PRÁVNÍ SLUŽBY
+               O NÁS
                <FontAwesomeIcon
-                  className={`side-drawer__item-icon${servicesActive ? "-active" : ""}`}
+                  className={`side-drawer__item-icon${aboutActive ? "-active" : ""}`}
                   icon={faChevronRight}
                   size="2x"
                />

@@ -3,49 +3,13 @@
 @import "../../Styles/typography";
 
 .services {
+   padding-top: 2rem;
    background-color: $color-background-primary;
 
    &__container {
       padding: 4rem;
       margin: auto;
       max-width: $body-max-width;
-   }
-
-   &__about-box {
-      text-align: center;
-      font-size: 2rem;
-      padding: 2rem 0 4rem 0;
-   }
-}
-
-.portfolio--heading {
-   font-size: $font-size-heading;
-   font-weight: 600;
-   text-align: center;
-   margin: 3rem auto;
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   align-items: center;
-
-   &__box {
-      width: 1.5rem;
-      height: 3rem;
-      margin-right: 0.75rem;
-      background-color: $color-primary;
-   }
-
-   &__hr {
-      max-width: 40%;
-      margin: $hr-margin-xl;
-
-      @include media(mob-lg) {
-         max-width: 45%;
-      }
-
-      @include media(tab-lg) {
-         max-width: 20%;
-      }
    }
 }
 
@@ -125,8 +89,4 @@
          transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
       }
    }
-}
-
-.portfolio-hash {
-   height: 2rem;
 }

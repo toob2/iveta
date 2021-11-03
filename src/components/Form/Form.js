@@ -1,5 +1,6 @@
 import React from "react";
 import "./Form.scss";
+import Header from "../Header/Header";
 import { useForm } from "react-hook-form";
 import emailjs from "emailjs-com";
 
@@ -68,11 +69,7 @@ const Form = (props) => {
 
    return (
       <div className="contact-form">
-         <div className="contact-form__heading">
-            <div className="contact-form__heading-box"></div>
-            <p>Kontaktní formulář</p>
-         </div>
-         <hr className="contact-form__heading-hr" />
+         <Header name="Kontaktní formulář" />
          <form action="" id="form1" className="contact-form" onSubmit={handleSubmit(onSubmit)}>
             <div className="contact-form__wrapper">
                {/* Name */}

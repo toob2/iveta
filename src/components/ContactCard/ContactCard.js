@@ -1,5 +1,6 @@
 import React from "react";
 import "./ContactCard.scss";
+import Header from "../Header/Header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import {
@@ -12,12 +13,7 @@ import SimpleMap from "../Map/Map";
 
 const ContactCard = (props) => (
    <div className="contact-card">
-      <div className="contact-card__heading">
-         <div className="contact-card__heading-box"></div>
-         <p>Kontakt</p>
-      </div>
-      <hr className="contact-card__heading-hr" />
-
+      <Header name="Kontakt" />
       <div className="contact-card__body-wrapper">
          <div className="contact-card__body-content">
             <div className="contact-card__body-content-header">
@@ -30,23 +26,29 @@ const ContactCard = (props) => (
                   <FontAwesomeIcon className="icon-wrapper-icon" icon={faCircle} />
                   <FontAwesomeIcon className="icon-wrapper-icon-top" icon={faMapMarkerAlt} />
                </div>
-               Adresa pobočky:&nbsp; <span> Pobřežní 78, Praha 8 - Karlín</span>
+               <p>
+                  Adresa pobočky:&nbsp;<span>Pobřežní 78, Praha 8 - Karlín</span>
+               </p>
             </div>
             <div className="contact-card__body-content-title">
                <div className="icon-wrapper">
                   <FontAwesomeIcon className="icon-wrapper-icon" icon={faCircle} />
                   <FontAwesomeIcon className="icon-wrapper-icon-top" icon={faPhone} />
                </div>
-               Telefonní číslo:&nbsp;
-               <a href="tel:+420608901616">+420 608 901 616</a>
+               <p>
+                  Telefonní číslo:&nbsp;
+                  <a href="tel:+420608901616">+420 608 901 616</a>
+               </p>
             </div>
             <div className="contact-card__body-content-title">
                <div className="icon-wrapper">
                   <FontAwesomeIcon className="icon-wrapper-icon" icon={faCircle} />
                   <FontAwesomeIcon className="icon-wrapper-icon-top" icon={faEnvelope} />
                </div>
-               Email:&nbsp;
-               <a href="mailto:iveta@strmenova">iveta@strmenova.cz</a>
+               <p>
+                  Email:&nbsp;
+                  <a href="mailto:iveta@strmenova">iveta@strmenova.cz</a>
+               </p>
             </div>
          </div>
 

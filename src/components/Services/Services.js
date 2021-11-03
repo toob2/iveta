@@ -1,5 +1,6 @@
 import React from "react";
 import "./Services.scss";
+import Header from "../Header/Header";
 //import ScrollReveal from "";
 
 // Icons
@@ -7,19 +8,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBriefcase, faGavel, faHome } from "@fortawesome/free-solid-svg-icons";
 
 const services = () => (
-   <div className="services" id="o-mne">
+   <div className="services" id="pravni-sluzby">
       <div className="services__container">
-         <div className="services__about-box">
-            <b>Jsem Mgr. Iveta Strmeňová.</b> Dělám moderní advokátní služby zaměřené na širokou
-            veřejnost. Business není mojí prioritou, chci dosahovat cílů společně s klientem. Vždy
-            se snažím dělat něco navíc a věci vylepšovat. Poskytuji právní služby soukromým klientům
-            z celého světa.
-         </div>
-         <div className="portfolio--heading" id="pravni-sluzby">
-            <div className="portfolio--heading__box"></div>
-            <p>Naše služby</p>
-         </div>
-         <hr className="portfolio--heading__hr" />
+         <Header name="Naše služby" />
          <div className="portfolio">
             {/* Service 1 */}
             <div className="portfolio__item">

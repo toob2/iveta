@@ -8,7 +8,7 @@ const contact = () => (
       <div className="contact-details">
          <ContactCard />
       </div>
-      <div className="contact-map">
+      <div>
          <Form />
       </div>
    </div>

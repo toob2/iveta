@@ -7,12 +7,10 @@ import Footer from "./components/Footer/Footer";
 import Landing from "./components/Landing/Landing";
 import Contact from "./components/Contact/Contact";
 import Services from "./components/Services/Services";
+import About from "./components/About/About";
 import ScrollUpButton from "react-scroll-up-button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
-
-// import AnchorLink from "react-anchor-link-smooth-scroll";
-
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 class App extends Component {
@@ -48,6 +46,9 @@ class App extends Component {
                <SideDrawer show={this.state.sideDrawerOpen} click={this.backdropClickHandler} />
                {backdrop}
                <Switch>
+                  <Route path="/o-nas" component={About}>
+                     <About />
+                  </Route>
                   <Route path="/kontakt" component={Contact}>
                      <Contact />
                   </Route>
