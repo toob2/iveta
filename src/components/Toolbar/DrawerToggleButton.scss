@@ -23,9 +23,9 @@
       cursor: pointer;
       transition: all 275ms ease-in-out;
 
-      &-scroll {
-         transform: scale(0.85);
-      }
+      // &-scroll {
+      //    transform: scale(0.85);
+      // }
 
       &::before {
          content: "";

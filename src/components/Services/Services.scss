@@ -3,134 +3,130 @@
 @import "../../Styles/typography";
 
 .services {
-  background-color: $color-background-primary;
+   background-color: $color-background-primary;
 
-  &__container {
-    padding: 4rem;
-    margin: auto;
-    max-width: $body-max-width;
-  }
+   &__container {
+      padding: 4rem;
+      margin: auto;
+      max-width: $body-max-width;
+   }
 
-  &__about-box {
-    text-align: center;
-    font-size: 2rem;
-    padding: 2rem 0 4rem 0;
-  }
+   &__about-box {
+      text-align: center;
+      font-size: 2rem;
+      padding: 2rem 0 4rem 0;
+   }
 }
 
 .portfolio--heading {
-  font-size: 3rem;
-  font-weight: 600;
-  text-align: center;
-  margin: 3rem auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+   font-size: $font-size-heading;
+   font-weight: 600;
+   text-align: center;
+   margin: 3rem auto;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
 
-  &__box {
-    width: 1.5rem;
-    height: 3rem;
-    margin-right: 0.75rem;
-    background-color: $color-primary;
-  }
+   &__box {
+      width: 1.5rem;
+      height: 3rem;
+      margin-right: 0.75rem;
+      background-color: $color-primary;
+   }
 
-  &__hr {
-    max-width: 40%;
-    margin: 4rem auto;
+   &__hr {
+      max-width: 40%;
+      margin: $hr-margin-xl;
 
-    @include media(mob-lg) {
-      max-width: 45%;
-    }
+      @include media(mob-lg) {
+         max-width: 45%;
+      }
 
-    @include media(tab-lg) {
-      max-width: 20%;
-    }
-  }
+      @include media(tab-lg) {
+         max-width: 20%;
+      }
+   }
 }
 
 .portfolio {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 1;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   flex-basis: 100%;
+   flex: 1;
 
-  @include media(mob-lg) {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
+   @include media(mob-lg) {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-evenly;
+   }
 
-  &__item {
-    width: 80%;
-    max-width: 40rem;
-    min-height: 50rem;
-    background: linear-gradient(
-      180deg,
-      $color-background-primary,
-      $color-background-secondary
-    );
-    border-radius: 1rem;
-    box-shadow: 5px blue;
-    padding: 2rem 0;
-    margin-bottom: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    overflow: hidden;
-    transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-
-    @include media(mob-lg) {
-      min-height: 47rem;
-    }
-
-    &__icon {
+   &__item {
+      width: 80%;
+      max-width: 40rem;
+      min-height: 50rem;
+      background: linear-gradient(180deg, $color-background-primary, $color-background-secondary);
+      border-radius: 1rem;
+      box-shadow: 5px blue;
+      padding: 2rem 0;
       margin-bottom: 2rem;
-      font-size: $portfolio-item-height / 5;
-    }
-
-    &__header {
-      font-size: $portfolio-item-height / 20;
-      text-transform: uppercase;
-      font-weight: 600;
-      text-align: center;
-    }
-
-    &__hr {
-      width: 70%;
-      margin: 3rem 0;
-    }
-
-    &__text {
-      font-weight: 500;
-    }
-
-    &__list {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      text-align: center;
-      list-style-type: none;
-      margin-bottom: 2rem;
-
-      li {
-        padding: 0.5rem;
-        font-size: 1.5rem;
-      }
-    }
-
-    &:hover {
-      filter: brightness(0.9);
-      transform: scale(1.02);
+      align-items: center;
+      justify-content: flex-start;
+      overflow: hidden;
       transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-    }
-  }
+
+      @include media(mob-lg) {
+         min-height: 47rem;
+      }
+
+      &__icon {
+         margin-bottom: 2rem;
+         font-size: $portfolio-item-height / 5;
+      }
+
+      &__header {
+         font-size: $portfolio-item-height / 20;
+         text-transform: uppercase;
+         font-weight: 600;
+         text-align: center;
+      }
+
+      &__hr {
+         width: 70%;
+         margin: 3rem 0;
+      }
+
+      &__text {
+         font-weight: 500;
+      }
+
+      &__list {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         text-align: center;
+         list-style-type: none;
+         margin-bottom: 2rem;
+
+         li {
+            padding: 0.5rem;
+            font-size: 1.5rem;
+         }
+      }
+
+      &:hover {
+         filter: brightness(0.9);
+         transform: scale(1.02);
+         transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      }
+   }
 }
 
 .portfolio-hash {
-  height: 2rem;
+   height: 2rem;
 }

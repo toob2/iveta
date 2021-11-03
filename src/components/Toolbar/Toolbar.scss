@@ -8,13 +8,19 @@
    position: fixed;
    top: 0;
    left: 0;
-   background: $color-primary;
-   box-shadow: 0 4px 4px -3px black;
+   background: transparent;
    height: $toolbar-height;
    transition: ease-in-out 0.5s;
 
+   &-dark {
+      background: $color-primary;
+      box-shadow: 0 4px 4px -3px black;
+      transition: ease-in-out 0.5s;
+   }
+
    &-scroll {
-      height: $toolbar-height * $scroll-size;
+      background: $color-primary;
+      box-shadow: 0 4px 4px -3px black;
       transition: ease-in-out 0.5s;
    }
 
@@ -36,11 +42,11 @@
          height: $toolbar-height;
          width: $toolbar-height / 1.35;
          transition: ease-in-out 0.5s;
-         &-scroll {
-            height: $toolbar-height * $scroll-size;
-            width: $toolbar-height / 1.35 * $scroll-size;
-            transition: ease-in-out 0.5s;
-         }
+         // &-scroll {
+         //    // height: $toolbar-height * $scroll-size;
+         //    // width: $toolbar-height / 1.35 * $scroll-size;
+         //    transition: ease-in-out 0.5s;
+         // }
       }
       &__g {
          fill: $color-secondary;

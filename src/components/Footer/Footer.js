@@ -15,15 +15,15 @@ const footer = () => (
                <ul className="list">
                   <li>ČAK: 145454</li>
                   <li>IČ: 73222222222</li>
-                  <li>DATOVÁ SCHRÁNKA:</li>
+                  <li>Datová schránka:</li>
                   <li>
-                     <a
+                     {/* <a
                         className="main-footer__link"
-                        href="https://www.mojedatovaschranka.cz/sds/detail.do?dbid="
+                        // href="https://www.mojedatovaschranka.cz/sds/detail.do?dbid="
                         target="_blank"
-                     >
-                        jkg1254x
-                     </a>
+                     > */}
+                     jkg1254x
+                     {/* </a> */}
                   </li>
                </ul>
             </div>

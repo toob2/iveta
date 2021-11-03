@@ -69,10 +69,10 @@ const Form = (props) => {
    return (
       <div className="contact-form">
          <div className="contact-form__heading">
-            <div className="contact-form__heading__box"></div>
+            <div className="contact-form__heading-box"></div>
             <p>Kontaktní formulář</p>
          </div>
-         <hr className="contact-form__heading__hr" />
+         <hr className="contact-form__heading-hr" />
          <form action="" id="form1" className="contact-form" onSubmit={handleSubmit(onSubmit)}>
             <div className="contact-form__wrapper">
                {/* Name */}

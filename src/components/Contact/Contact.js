@@ -8,10 +8,9 @@ const contact = () => (
    <div className="contact top-padder">
       <div className="contact-details">
          <ContactCard />
-         <Form />
       </div>
-      <div className="contact-map top-padder">
-         <SimpleMap />
+      <div className="contact-map">
+         <Form />
       </div>
    </div>
 );

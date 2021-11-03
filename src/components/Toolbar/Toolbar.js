@@ -21,17 +21,16 @@ const Toolbar = (props) => {
 
    const [scroll, setClass] = useState(false);
    const listenScrollEvent = (event) => {
-      if (window.scrollY < 100) {
+      if (window.scrollY < 1) {
          return setClass(scroll);
-      } else if (window.scrollY > 110) {
+      } else if (window.scrollY > 1) {
          return setClass(!scroll);
       }
    };
 
-   if (scroll && !props.show) {
-      burgerClasses += ` ${burgerClasses}-scroll`;
-   } else if (scroll && props.show) {
-      burgerClasses += ` toggler__burger-active-scroll`;
+   let isDark = false;
+   if (window.location.pathname === "/kontakt") {
+      isDark = true;
    }
 
    useEffect(() => {
@@ -40,12 +39,15 @@ const Toolbar = (props) => {
    }, []);
 
    return (
-      <header className={`toolbar${scroll ? " toolbar-scroll" : ""}`}>
+      <header
+         className={`toolbar${scroll ? " toolbar-scroll" : ""} ${isDark ? "toolbar-dark" : ""}`}
+      >
          <nav className="toolbar__navigation">
             <a href="/" className="toolbar__logo-link">
                <div className="toolbar__logo">
                   <svg
-                     className={`toolbar__logo__svg${scroll ? "-scroll" : ""}`}
+                     // className={`toolbar__logo__svg${scroll ? "-scroll" : ""}`}
+                     className={"toolbar__logo__svg"}
                      version="1.0"
                      xmlns="http://www.w3.org/2000/svg"
                      width="882.000000pt"

@@ -58,6 +58,7 @@ class App extends Component {
                </Switch>
                <Footer />
             </Router>
+
             <ScrollUpButton
                style={{ width: 35, height: 35 }}
                ToggledStyle={{ right: 10, bottom: 20 }}
