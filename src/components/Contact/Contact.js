@@ -1,7 +1,6 @@
 import React from "react";
 import Form from "../Form/Form";
 import ContactCard from "../ContactCard/ContactCard";
-import SimpleMap from "../Map/Map";
 import "./Contact.scss";
 
 const contact = () => (
