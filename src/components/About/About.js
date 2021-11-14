@@ -10,6 +10,8 @@ import {
    faCircle,
    faAngleRight,
 } from "@fortawesome/free-solid-svg-icons";
+import Card from "../Card/Card";
+
 import iveta from "../Images/iveta.jpg";
 
 const about = (props) => (
@@ -62,14 +64,26 @@ const about = (props) => (
 
          <div className="about__body__our-team">
             <div className="about__body__our-team__img-wrapper">
-               <img src={iveta} alt="Iveta Strmeňová" />
-               <p className="about__body__our-team__img-text">Mgr. Iveta Strmeňová,</p>
-               <p className="about__body__our-team__img-text">advokátka</p>
+               <Card
+                  card={{
+                     img: iveta,
+                     name: "Mgr. Iveta Strmeňová",
+                     subtitle: "advokátka",
+                     phone: "+420 608 901 616",
+                     email: "iveta@strmenova.cz",
+                  }}
+               />
             </div>
             <div className="about__body__our-team__img-wrapper">
-               <img src={iveta} alt="Iveta Strmeňová" />
-               <p className="about__body__our-team__img-text">Mgr. Hana Fojtová,</p>
-               <p className="about__body__our-team__img-text">advokátka</p>
+               <Card
+                  card={{
+                     img: iveta,
+                     name: "Mgr. Hana Fojtová",
+                     subtitle: "advokátka",
+                     phone: "+420 608 901 616",
+                     email: "iveta@strmenova.cz",
+                  }}
+               />
             </div>
          </div>
       </div>

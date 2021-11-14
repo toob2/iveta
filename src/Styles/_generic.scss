@@ -1,0 +1,13 @@
+@import "/src/Styles/colors";
+@import "/src/Styles/typography";
+
+.generic-link {
+   font-weight: 600;
+   color: $color-secondary;
+   text-decoration: none;
+   transition: 0.5s ease;
+   &:active,
+   &:hover {
+      color: $color-tertiary;
+   }
+}

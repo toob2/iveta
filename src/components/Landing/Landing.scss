@@ -33,7 +33,7 @@
       max-width: $body-max-width / 1.5;
       border-radius: 0.5rem;
       width: 90%;
-      top: 17%;
+      top: 20%;
       text-align: center;
       padding: 1.25rem;
       background-color: transparent;
@@ -49,14 +49,14 @@
 
       &__item {
          font-weight: 600;
-         font-size: 1.75rem;
+         font-size: 1.5rem;
 
          @include media(mob-sm) {
-            font-size: 2.25rem;
+            font-size: 1.75rem;
          }
 
          @include media(mob-med) {
-            font-size: 2.75rem;
+            font-size: 2.25rem;
          }
 
          @include media(mob-lg) {
@@ -64,18 +64,18 @@
          }
 
          @include media(tab-lg) {
-            font-size: 4rem;
+            font-size: 3.5rem;
          }
 
          @include media(tab-lg-lan) {
-            font-size: 4rem;
+            font-size: 3.5rem;
          }
       }
    }
 
    &__scrolldown {
       position: absolute;
-      bottom: 5%;
+      bottom: 7%;
       padding: 1rem;
       animation: appear 1s ease-in-out;
 

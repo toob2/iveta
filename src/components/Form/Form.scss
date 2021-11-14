@@ -150,6 +150,10 @@
       box-shadow: 0.6rem 0.6rem 1.75rem rgba(black, 0.45);
       outline: none;
    }
+
+   &-loading {
+      color: blue;
+   }
 }
 
 .Toastify__toast-container--top-right {

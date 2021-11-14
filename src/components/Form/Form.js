@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Form.scss";
 import Header from "../Header/Header";
 import { useForm } from "react-hook-form";
@@ -45,6 +45,11 @@ const Form = (props) => {
       });
    };
 
+   const [isLoading, setLoadingState] = useState(false);
+   const toggleLoadingState = () => {
+      setLoadingState(!isLoading);
+   };
+
    const onSubmit = async (data) => {
       try {
          const templateParams = {
@@ -60,8 +65,12 @@ const Form = (props) => {
          //   templateParams,
          //   process.env.REACT_APP_USER,
          // );
-         triggerToast();
-         reset();
+         // triggerToast();
+         toggleLoadingState();
+         setTimeout(() => {
+            toggleLoadingState();
+         }, 2000);
+         //reset();
       } catch (e) {
          console.log(e);
       }
@@ -230,7 +239,11 @@ const Form = (props) => {
             {/* Submit button */}
             <div className="contact-form__wrapper">
                <div className="input">
-                  <input type="submit" value="Odeslat formulář" className="btn--submit" />
+                  <input
+                     type="submit"
+                     value="Odeslat formulář"
+                     className={`${isLoading ? "btn--submit btn--submit-loading" : "btn--submit"}`}
+                  />
                </div>
             </div>
          </form>

@@ -1,0 +1,64 @@
+@import "../../Styles/colors";
+@import "../../Styles/animations";
+@import "../../Styles/mixins";
+@import "../../Styles/typography";
+
+.card {
+   min-height: 15rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   box-shadow: 0px 0px 1px 1px $color-secondary;
+   border-radius: 0.5rem;
+   &__img {
+      border-radius: 0.5rem 0.5rem 0 0;
+      height: 60%;
+      width: 100%;
+   }
+   &__text__wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 0.25rem;
+   }
+   &__title {
+      font-size: 2rem;
+      font-weight: 600;
+      @include media(mob-med) {
+         font-size: 2.25rem;
+      }
+   }
+   &__subtitle {
+      font-size: 1.75rem;
+      padding-top: 0;
+      @include media(mob-med) {
+         font-size: 2rem;
+      }
+   }
+   &__item__wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+   }
+
+   &__link {
+      line-height: 1;
+      color: $color-text;
+      font-weight: 400;
+      font-size: 1.5rem;
+      text-decoration: none;
+      transition: 0.5s ease;
+      padding-top: 0.5rem;
+      &:active,
+      &:hover {
+         color: $color-tertiary;
+      }
+      @include media(mob-med) {
+         font-size: 2rem;
+      }
+   }
+   &__text {
+      padding: 0.25rem 0;
+   }
+}
