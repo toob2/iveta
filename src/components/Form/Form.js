@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./Form.scss";
 import Header from "../Header/Header";
 import { useForm } from "react-hook-form";

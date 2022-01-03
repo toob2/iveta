@@ -1,5 +1,9 @@
 import React, { Component } from "react";
 import "./App.scss";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { connect } from "react-redux";
+import { setActive } from "./actions/setActive";
+import { setInactive } from "./actions/setInactive";
 import Toolbar from "./components/Toolbar/Toolbar";
 import SideDrawer from "./components/SideDrawer/SideDrawer";
 import BackDrop from "./components/Backdrop/Backdrop";
@@ -9,9 +13,6 @@ import Contact from "./components/Contact/Contact";
 import Services from "./components/Services/Services";
 import About from "./components/About/About";
 import ScrollUpButton from "react-scroll-up-button";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 class App extends Component {
    state = {
@@ -32,12 +33,18 @@ class App extends Component {
 
    render() {
       let backdrop;
-
       if (this.state.sideDrawerOpen) {
          backdrop = <BackDrop click={this.backdropClickHandler} />;
       }
+      console.log("INFO: APP: " + JSON.stringify(this.props));
       return (
          <div className="App">
+            <br />
+            <br />
+            <br />
+            <br />
+
+            {this.props.active ? <h1>active</h1> : <h1>inactive</h1>}
             <Router>
                <Toolbar
                   drawerClickHandler={this.drawerToggleClickHandler}
@@ -59,7 +66,6 @@ class App extends Component {
                </Switch>
                <Footer />
             </Router>
-
             <ScrollUpButton
                style={{ width: 35, height: 35 }}
                ToggledStyle={{ right: 10, bottom: 20 }}
@@ -73,4 +79,13 @@ class App extends Component {
    }
 }
 
-export default App;
+const mapStateToProps = (state) => ({
+   ...state,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+   setActive: () => dispatch(setActive),
+   setInactive: () => dispatch(setInactive),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
