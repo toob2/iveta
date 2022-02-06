@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { connect } from "react-redux";
 import { HashLink as Link } from "react-router-hash-link";
 import "./SideDrawer.scss";
 // Icons
@@ -41,6 +42,11 @@ const SideDrawer = (props) => {
       setContactState(!contactActive);
    };
 
+   const clickLink = (props, type) => {
+      props.click();
+      props.dispatch({ type: type });
+   };
+
    return (
       <nav className={drawerClasses}>
          <ul className="side-drawer__list">
@@ -50,6 +56,7 @@ const SideDrawer = (props) => {
                smooth
                to="/#"
                onClick={props.click}
+               // onClick={clickLink(props, 1)}
                onMouseEnter={toggleIntro}
                onMouseLeave={toggleIntro}
             >
@@ -115,4 +122,7 @@ const SideDrawer = (props) => {
    );
 };
 
-export default SideDrawer;
+const mapStateToProps = (state) => ({
+   ...state,
+});
+export default connect(mapStateToProps)(SideDrawer);

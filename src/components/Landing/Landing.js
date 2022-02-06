@@ -14,7 +14,6 @@ const landing = () => (
          <p className="landing__text-box__item">ADVOKÁTNÍ KANCELÁŘ</p>
          <hr className="landing__hr" />
          <p className="landing__text-box__item">Mgr. Iveta Strmeňová, advokátka</p>
-         <p className="landing__text-box__item">Mgr. Hana Fojtová, advokátka</p>
       </div>
 
       <div className="landing__scrolldown">

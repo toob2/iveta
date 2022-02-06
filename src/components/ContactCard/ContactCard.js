@@ -27,7 +27,10 @@ const ContactCard = (props) => (
                   <FontAwesomeIcon className="icon-wrapper-icon-top" icon={faMapMarkerAlt} />
                </div>
                <p>
-                  Adresa pobočky:&nbsp;<span>Pobřežní 78, Praha 8 - Karlín</span>
+                  Adresa pobočky:&nbsp;
+                  <a href="https://goo.gl/maps/KnbbKo2tqJuidwaq6">
+                     <span>Pobřežní 78, Praha 8 - Karlín</span>
+                  </a>
                </p>
             </div>
             <div className="contact-card__body-content-title">

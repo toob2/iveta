@@ -1,14 +1,24 @@
 export default (state, action) => {
    switch (action.type) {
-      case "SET_ACTIVE":
+      case 1:
          return {
-            active: action.active,
+            active: 1,
          };
-      case "SET_INACTIVE":
+      case 2:
          return {
-            active: action.active,
+            active: 2,
+         };
+      case 3:
+         return {
+            active: 3,
+         };
+      case 4:
+         return {
+            active: 4,
          };
       default:
-         return state;
+         return {
+            active: 1,
+         };
    }
 };
