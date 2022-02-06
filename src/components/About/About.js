@@ -59,6 +59,10 @@ const About = (props) => {
             </div>
 
             <div className="about__body-wrapper__team">
+               <div className="about__body-wrapper__text-header">
+                  <p>Náš Team</p>
+               </div>
+               <div className="about__body-wrapper__text__box"></div>
                <div className="about__body-wrapper__team__box"></div>
                <div className="about__body__our-team__img-wrapper">
                   <Card

@@ -79,6 +79,17 @@ const Form = (props) => {
    return (
       <div className="contact-form">
          <Header name="Kontaktní formulář" />
+         <div className="contact-card__body-content-header">
+            <p>
+               Napište nám prostřednictvím přiloženého kontaktního formuláře. Rádi se Vám ozveme a
+               poradíme, jak dále postupovat.
+            </p>
+            <p>
+               Formulář slouží k nezávaznému poptání právních služeb a jeho odesláním potvrzujete,
+               že jste se seznámili s podmínkami zpracování osobních údajů.
+            </p>
+         </div>
+         <div className="contact-card__body-content__box"></div>
          <form action="" id="form1" className="contact-form" onSubmit={handleSubmit(onSubmit)}>
             <div className="contact-form__wrapper">
                {/* Name */}

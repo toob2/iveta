@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import Form from "../Form/Form";
 import ContactCard from "../ContactCard/ContactCard";
 import "./Contact.scss";
+import SimpleMap from "../Map/Map";
 
 const Contact = (props) => {
    useEffect(() => {
@@ -10,11 +11,16 @@ const Contact = (props) => {
    }, []);
    return (
       <div className="contact top-padder">
-         <div className="contact-details">
-            <ContactCard />
+         <div className="contact__wrapper">
+            <div className="contact__item">
+               <ContactCard />
+            </div>
+            <div className="contact__item">
+               <Form />
+            </div>
          </div>
-         <div>
-            <Form />
+         <div className="map-wrapper">
+            <SimpleMap />
          </div>
       </div>
    );

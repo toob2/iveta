@@ -9,7 +9,6 @@ import {
    faMapMarkerAlt,
    faCircle,
 } from "@fortawesome/free-solid-svg-icons";
-import SimpleMap from "../Map/Map";
 
 const ContactCard = (props) => (
    <div className="contact-card">
@@ -53,10 +52,6 @@ const ContactCard = (props) => (
                   <a href="mailto:iveta@strmenova">iveta@strmenova.cz</a>
                </p>
             </div>
-         </div>
-
-         <div className="contact-card__body-map-wrapper">
-            <SimpleMap />
          </div>
       </div>
    </div>

@@ -11,14 +11,10 @@
    }
 
    &__body-content {
-      padding: 2rem;
       width: 100%;
       display: flex;
       flex-direction: column;
       align-self: left;
-      @include media(tab-sm) {
-         padding-left: 4rem;
-      }
 
       &__box {
          width: 4rem;
@@ -53,11 +49,6 @@
             }
          }
       }
-   }
-   &__body-map-wrapper {
-      padding-top: 4rem;
-      height: 40rem;
-      width: 100%;
    }
 }
 
