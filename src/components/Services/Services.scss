@@ -20,36 +20,54 @@
    flex-basis: 100%;
    flex: 1;
 
-   @include media(mob-lg) {
+   @include media(tab-lg) {
       display: flex;
-      flex-wrap: wrap;
-      width: 100%;
       flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+   }
+
+   @include media(tab-lg-lan) {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
       justify-content: space-evenly;
    }
 
    &__item {
+      height: 55rem;
       width: 100%;
-      max-width: 50rem;
-      height: 70rem;
-      background: linear-gradient(180deg, $color-background-primary, $color-background-secondary);
-      border-radius: 1rem;
-      box-shadow: 5px blue;
-      padding: 2rem;
+
+      max-width: 55rem;
       margin-bottom: 2rem;
+
+      padding: 2rem 1rem;
+
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-start;
+      justify-content: center;
+
+      background: linear-gradient(180deg, $color-background-primary, $color-background-secondary);
+      border-radius: 0.5rem;
+      box-shadow: 5px blue;
+
       overflow: hidden;
       transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 
-      @include media(mob-lg) {
-         min-height: 47rem;
+      @include media(tab-lg) {
+         justify-content: flex-start;
+         height: 50rem;
+      }
+
+      @include media(tab-lg-lan) {
+         justify-content: flex-start;
+         height: 50rem;
       }
 
       &__icon {
-         margin-bottom: 2rem;
          font-size: $portfolio-item-height / 5;
       }
 
@@ -59,47 +77,38 @@
          font-weight: 600;
          text-align: center;
          &-sm {
-            text-transform: uppercase;
             font-size: $portfolio-item-height / 30;
             padding-bottom: 0.5rem;
          }
       }
 
       &__hr {
-         width: 70%;
-         margin: 3rem 0;
+         @include hrStyle(30%, 5rem);
          &-sm {
-            margin: 0.5rem auto;
-            width: 10%;
+            @include hrStyle(20%, 2rem);
          }
       }
 
       &__text {
+         font-size: 1.5rem;
          font-weight: 500;
       }
 
       &__list {
-         display: flex;
-         flex-direction: column;
-         justify-content: center;
-         text-align: center;
          list-style-type: none;
-         margin-bottom: 2rem;
+         text-align: center;
+      }
 
-         li {
-            padding: 0.5rem;
-            font-size: 1.5rem;
-         }
+      &__list-sm {
+         list-style-type: none;
+         text-align: center;
+         margin-bottom: 1.5rem;
       }
 
       &:hover {
          filter: brightness(0.9);
          transform: scale(1.02);
          transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-      }
-
-      li {
-         padding: 1rem 0;
       }
    }
 }

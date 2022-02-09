@@ -3,21 +3,22 @@
 @import "../../Styles/mixins";
 
 .contact {
-   max-width: $body-max-width;
    margin: auto;
    height: 100%;
    width: 100%;
    display: flex;
    flex-direction: column;
    &__wrapper {
+      margin: auto;
+      max-width: $body-max-width;
       padding: 2rem;
-
       display: flex;
       flex-direction: column;
+      gap: 5rem;
+
       @media only screen and (min-width: 1000px) {
          display: flex;
          flex-direction: row;
-         gap: 2rem;
          justify-content: space-around;
       }
    }

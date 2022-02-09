@@ -7,7 +7,6 @@ const Header = (props) => (
          <div className="header-sm__text-box"></div>
          <p>{props.name}</p>
       </div>
-      <hr className="header-sm-hr" />
    </div>
 );
 

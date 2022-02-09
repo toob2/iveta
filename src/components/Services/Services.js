@@ -6,51 +6,49 @@ import Header from "../Header/Header";
 // Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBriefcase, faGavel, faHome } from "@fortawesome/free-solid-svg-icons";
+import { VscLaw } from "react-icons/vsc";
+import { MdOutlineFamilyRestroom, MdOutlineBusinessCenter } from "react-icons/md";
+import { GiChart } from "react-icons/gi";
 
 const services = () => (
    <div className="services" id="pravni-sluzby">
       <div className="services__container">
          <Header name="Naše služby" />
+         <hr className="portfolio__item__hr" />
+
          <div className="portfolio">
             {/* Service 1 */}
             <div className="portfolio__item">
                <div className="portfolio__item__icon">
-                  <FontAwesomeIcon icon={faGavel} />
+                  <VscLaw />
                </div>
                <div className="portfolio__item__header">Občanské právo</div>
-               <hr className="portfolio__item__hr" />
+               <hr className="portfolio__item__hr-sm" />
                <div className="portfolio__item__text">
                   <ul className="portfolio__item__list">
                      <li>
-                        <p className="portfolio__item__header-sm">Právo nemovitostí</p>
-                        <hr className="portfolio__item__hr-sm" />
-
-                        <p>
-                           Sepíšeme pro Vás kupní, darovací nebo směnnou smlouvu. Poradíme Vám i ve
-                           věci nájmu, zřízení a výmazu zástavních práv a služebností nebo ohledně
-                           zajištění Vaší transakce. Zajistíme rovněž vklad práva do katastru
-                           nemovitostí.
-                        </p>
+                        <p className="portfolio__item__header-sm">Nemovitosti</p>
+                        <ul className="portfolio__item__list-sm">
+                           <li>Kupní, darovací a směnné smlouvy</li>
+                           <li>Vklad práva do katastru nemovitostí</li>
+                           <li>Zástavní právo</li>
+                        </ul>
                      </li>
                      <li>
                         <p className="portfolio__item__header-sm">Smluvní agenda</p>
-                        <hr className="portfolio__item__hr-sm" />
-
-                        <p>
-                           Právní poradenství poskytujeme i v oblasti smluvního práva, zejména ve
-                           věci sepisu a revize smluv a dále nastavení a zajištění obchodních
-                           transakcí dle individuálních potřeb klienta.
-                        </p>
+                        <ul className="portfolio__item__list-sm">
+                           <li>Sepsání a revize smluv</li>
+                           <li>
+                              Nastavení a zajištění obchodních transakcí dle individuálních potřeb
+                              klienta
+                           </li>
+                        </ul>
                      </li>
                      <li>
-                        <p className="portfolio__item__header-sm">
-                           Sporná agenda a vymáhání pohledávek
-                        </p>
-                        <hr className="portfolio__item__hr-sm" />
-
+                        <p className="portfolio__item__header-sm">Pohledávky</p>
                         <p>
-                           Pomůžeme Vám s ochranou Vašich práv, a to nejen mimosoudně, ale i v rámci
-                           soudního či exekučního řízení.
+                           Pomůžeme Vám s ochranou Vašich práv, a to nejen mimosoudně,
+                           <br /> ale i v rámci soudního či exekučního řízení.
                         </p>
                      </li>
                   </ul>
@@ -60,39 +58,35 @@ const services = () => (
             {/* Service 2 */}
             <div className="portfolio__item">
                <div className="portfolio__item__icon">
-                  <FontAwesomeIcon icon={faHome} />
+                  <MdOutlineFamilyRestroom />
                </div>
                <div className="portfolio__item__header">Rodinné právo</div>
-               <hr className="portfolio__item__hr" />
+               <hr className="portfolio__item__hr-sm" />
                <div className="portfolio__item__text">
                   <ul className="portfolio__item__list">
                      <li>
                         <p className="portfolio__item__header-sm">Rozvody</p>
-                        <hr className="portfolio__item__hr-sm" />
-
-                        <p>
-                           Provedeme vás celým rozvodovým řízením od podání žaloby až po konečné
-                           rozhodnutí ve věci včetně úpravy péče o děti, výživného, styku s dětmi a
-                           vypořádání vzájemných vztahů týkajících se společného majetku a bydlení
-                           tak, aby zvolené řešení co nejlépe odpovídalo potřebám Vás i Vašich dětí.
-                        </p>
+                        <ul className="portfolio__item__list-sm">
+                           <li>Rozvodové řízení</li>
+                           <li>Úprava péče o děti, výživného a styku s dětmi</li>
+                           <li>
+                              Vypořádání vzájemných vztahů týkajících se společného majetku a
+                              bydlení
+                           </li>
+                        </ul>
                      </li>
                      <li>
                         <p className="portfolio__item__header-sm">Péče o nezletilé</p>
-                        <hr className="portfolio__item__hr-sm" />
-
-                        <p>
-                           Ve vztahu k nezletilým dětem pomáháme zejména ve věci péče o ně, úpravě
-                           výživného a při podávání návrhů na nahrazení souhlasu rodiče ve věcech
-                           týkajících se záležitostí, které jsou pro dítě významné.
-                        </p>
-                     </li>
-                     <li>
-                        <p className="portfolio__item__header-sm">
-                           Úprava poměrů mezi nesezdanými páry a rodiči, kteří žijí odděleně.
-                        </p>
-                        <hr className="portfolio__item__hr-sm" />
-                        <p>Doplnit text</p>
+                        <ul className="portfolio__item__list-sm">
+                           <li>
+                              Úprava výživného a při podávání návrhů na nahrazení souhlasu rodiče
+                              <br />
+                              ve věcech týkajících se záležitostí, které jsou pro dítě významné.
+                           </li>
+                           <li>
+                              Úprava poměrů mezi nesezdanými páry a rodiči, kteří žijí odděleně.
+                           </li>
+                        </ul>
                      </li>
                   </ul>
                </div>
@@ -101,10 +95,10 @@ const services = () => (
             {/* Service 3 */}
             <div className="portfolio__item">
                <div className="portfolio__item__icon">
-                  <FontAwesomeIcon icon={faBriefcase} />
+                  <MdOutlineBusinessCenter />
                </div>
                <div className="portfolio__item__header">Pracovní právo</div>
-               <hr className="portfolio__item__hr" />
+               <hr className="portfolio__item__hr-sm" />
                <div className="portfolio__item__text">
                   <ul className="portfolio__item__list">
                      <li>Výpovědi z pracovního poměru</li>
@@ -118,12 +112,10 @@ const services = () => (
             {/* Service 4 */}
             <div className="portfolio__item">
                <div className="portfolio__item__icon">
-                  <FontAwesomeIcon icon={faHome} />
+                  <GiChart />
                </div>
-               <div className="portfolio__item__header">
-                  Obchodní korporace a zápisy do obchodního rejstříku
-               </div>
-               <hr className="portfolio__item__hr" />
+               <div className="portfolio__item__header">Obchodní právo</div>
+               <hr className="portfolio__item__hr-sm" />
                <div className="portfolio__item__text">
                   <ul className="portfolio__item__list">
                      <li>
