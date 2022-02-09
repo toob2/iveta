@@ -32,7 +32,7 @@
    align-items: $align-items;
 }
 
-// button style mixin
+// Button style mixin
 @mixin button($color, $background) {
    display: inline-block;
    text-transform: uppercase;

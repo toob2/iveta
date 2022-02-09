@@ -16,24 +16,26 @@
    position: relative;
 
    &__hr {
-      max-width: 60%;
-      margin: $hr-margin-sm;
+      @include hrStyle(60%, 2rem);
+      background-color: $color-secondary;
 
       @include media(mob-lg) {
-         max-width: 40%;
+         @include hrStyle(40%, 2.5rem);
+         background-color: $color-secondary;
       }
 
       @include media(tab-lg) {
-         max-width: 20%;
+         @include hrStyle(30%, 3rem);
+         background-color: $color-secondary;
       }
    }
 
    &__text-box {
       position: absolute;
-      max-width: $body-max-width / 1.5;
+      max-width: var(--max-body-width);
       border-radius: 0.5rem;
       width: 90%;
-      top: 20%;
+      top: 30%;
       text-align: center;
       padding: 1.25rem;
       background-color: transparent;
@@ -41,35 +43,15 @@
       white-space: wrap;
       text-overflow: ellipsis;
       animation: appear 1s ease-in-out;
-      color: white;
+      color: $color-secondary;
 
       @include media(mob-lg) {
-         top: 20%;
+         top: 25%;
       }
 
       &__item {
          font-weight: 600;
-         font-size: 1.5rem;
-
-         @include media(mob-sm) {
-            font-size: 1.75rem;
-         }
-
-         @include media(mob-med) {
-            font-size: 2.25rem;
-         }
-
-         @include media(mob-lg) {
-            font-size: 3rem;
-         }
-
-         @include media(tab-lg) {
-            font-size: 3.5rem;
-         }
-
-         @include media(tab-lg-lan) {
-            font-size: 3.5rem;
-         }
+         font-size: var(--font-size-landing);
       }
    }
 

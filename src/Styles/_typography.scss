@@ -7,7 +7,7 @@ $font-secondary: "Lato", sans-serif;
 // Font sizes
 $font-size-default: 1.6rem;
 $font-size-heading: 3rem;
-$font-size-navbar: $font-size-default * 1.25;
+$font-size-navbar: $font-size-default * 1.5;
 $font-size-card-title: $font-size-default * 1.35;
 $font-size-card-subtitle: $font-size-default * 1.15;
 
@@ -27,3 +27,46 @@ $hr-margin-xl: 6rem auto;
 
 // Paddings
 $body-component-padding: 1rem;
+
+:root {
+   --max-body-width: 150rem;
+   --toolbar-height: 6rem;
+   --toolbar-logo-height: 5rem;
+   --font-size: 1.6rem;
+   --font-size-nav: 2.25rem;
+   --font-size-landing: 2.5rem;
+}
+
+@include media(mob-lg) {
+   :root {
+      --font-size-landing: 3rem;
+   }
+}
+
+@include media(mob-lg-lan) {
+   :root {
+      --font-size-landing: 3rem;
+   }
+}
+
+@include media(tab-lg) {
+   :root {
+      --max-body-width: 175rem;
+      --toolbar-height: 8rem;
+      --toolbar-logo-height: 6rem;
+      --font-size: 2rem;
+      --font-size-nav: 2.5rem;
+      --font-size-landing: 3.5rem;
+   }
+}
+
+@include media(tab-lg-lan) {
+   :root {
+      --max-body-width: 175rem;
+      --toolbar-height: 8rem;
+      --toolbar-logo-height: 6rem;
+      --font-size: 2rem;
+      --font-size-nav: 2.5rem;
+      --font-size-landing: 3.5rem;
+   }
+}

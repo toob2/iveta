@@ -59,12 +59,11 @@
 
       @include media(tab-lg) {
          justify-content: flex-start;
-         height: 50rem;
+         height: 53rem;
       }
 
       @include media(tab-lg-lan) {
          justify-content: flex-start;
-         height: 50rem;
       }
 
       &__icon {

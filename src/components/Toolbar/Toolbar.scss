@@ -5,11 +5,11 @@
 .toolbar {
    z-index: 100;
    width: 100%;
+   height: var(--toolbar-height);
    position: fixed;
    top: 0;
    left: 0;
    background: transparent;
-   height: $toolbar-height;
    transition: ease-in-out 0.5s;
 
    &-dark {
@@ -27,7 +27,7 @@
    &__navigation {
       margin: auto;
       width: 100%;
-      max-width: $body-max-width;
+      max-width: var(--max-body-width);
       display: flex;
       align-items: center;
       height: 100%;
@@ -38,15 +38,9 @@
       margin-left: -0.5rem;
       &__svg {
          display: block;
-         padding: 0.25rem 0;
-         height: $toolbar-height;
-         width: $toolbar-height / 1.35;
+         height: var(--toolbar-logo-height);
+         width: var(--toolbar-logo-height);
          transition: ease-in-out 0.5s;
-         // &-scroll {
-         //    // height: $toolbar-height * $scroll-size;
-         //    // width: $toolbar-height / 1.35 * $scroll-size;
-         //    transition: ease-in-out 0.5s;
-         // }
       }
       &__g {
          fill: $color-secondary;
@@ -55,11 +49,11 @@
          }
       }
       &-link {
-         max-height: $toolbar-height;
+         max-height: var(--toolbar-height);
       }
    }
    &__navigation-items {
-      font-size: $font-size-navbar;
+      font-size: var(--font-size-nav);
 
       ul {
          flex: 1 1 auto;
@@ -89,6 +83,13 @@
          &-scroll {
             color: $color-primary;
          }
+      }
+      @include media(tab-lg) {
+         font-size: var(--font-size-nav);
+      }
+
+      @include media(tab-lg-lan) {
+         font-size: var(--font-size-nav);
       }
    }
 }

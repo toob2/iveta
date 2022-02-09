@@ -10,7 +10,7 @@
    flex-direction: column;
    &__wrapper {
       margin: auto;
-      max-width: $body-max-width;
+      max-width: var(body-max-width);
       padding: 2rem;
       display: flex;
       flex-direction: column;
@@ -31,7 +31,7 @@
 }
 
 .top-padder {
-   padding-top: $toolbar-height + 4rem;
+   padding-top: var(--toolbar-height) + 4rem;
 }
 
 .map-wrapper {

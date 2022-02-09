@@ -84,6 +84,7 @@ const Form = (props) => {
                Napište nám prostřednictvím přiloženého kontaktního formuláře. Rádi se Vám ozveme a
                poradíme, jak dále postupovat.
             </p>
+            <br />
             <p>
                Formulář slouží k nezávaznému poptání právních služeb a jeho odesláním potvrzujete,
                že jste se seznámili s podmínkami zpracování osobních údajů.
