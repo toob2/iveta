@@ -4,7 +4,6 @@ import Header from "../Header/Header";
 //import ScrollReveal from "";
 
 // Icons
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBriefcase, faGavel, faHome } from "@fortawesome/free-solid-svg-icons";
 import { VscLaw } from "react-icons/vsc";
 import { MdOutlineFamilyRestroom, MdOutlineBusinessCenter } from "react-icons/md";
