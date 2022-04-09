@@ -2,6 +2,10 @@
 @import "../../Styles/typography";
 @import "../../Styles/mixins";
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+$duration: 0.2s;
+$distance: 8px;
+$easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 .toolbar {
    z-index: 100;
    width: 100%;
@@ -72,16 +76,52 @@
       }
 
       a {
+         position: relative;
+         padding-bottom: 0.4rem;
          color: $color-secondary;
          text-decoration: none;
          font-weight: 500;
-         &:hover,
-         &:active {
-            color: $color-tertiary;
-            text-decoration: none;
-         }
+         transition: all $duration;
          &-scroll {
             color: $color-primary;
+         }
+
+         &:before,
+         &:after {
+            content: "";
+            position: absolute;
+            bottom: 2px;
+            left: 0;
+            right: 0;
+            height: 2.5px;
+            background-color: $color-tertiary;
+         }
+         &:before {
+            opacity: 0;
+            transform: translateY(-$distance);
+            transition: transform $duration $easeOutBack, opacity $duration;
+            transition: all $duration;
+         }
+         &:after {
+            opacity: 0;
+            transform: translateY($distance/2);
+            transition: transform $duration $easeOutBack, opacity $duration;
+         }
+
+         &:hover,
+         &:focus {
+            color: $color-tertiary;
+            &:before,
+            &:after {
+               opacity: 1;
+               transform: translateY(0);
+            }
+            &:before {
+               transition: transform $duration $easeOutBack, opacity $duration;
+            }
+            &:after {
+               transition: transform $duration $easeOutBack, opacity $duration;
+            }
          }
       }
       @include media(tab-lg) {
@@ -98,15 +138,11 @@
    flex: 1;
 }
 
-.nav-underline {
-   padding-bottom: 0.4rem;
-   background: linear-gradient(currentColor 0 0) bottom / var(--d, 0) 3px no-repeat;
-   transition: 0.5s;
-   &:hover,
-   &-active {
-      --d: 100%;
-   }
-}
+// .nav-underline {
+//    padding-bottom: 0.4rem;
+//    background: linear-gradient(currentColor 0 0) bottom / var(--d, 0) 3px no-repeat;
+//    transition: 0.5s;
+// }
 
 @media (min-width: 769px) {
    .toolbar__toggle-button {

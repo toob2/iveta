@@ -22,6 +22,9 @@ const Contact = (props) => {
          <div className="map-wrapper">
             <SimpleMap />
          </div>
+         <div className="infobox">
+            <p>INFOBOX</p>
+         </div>
       </div>
    );
 };

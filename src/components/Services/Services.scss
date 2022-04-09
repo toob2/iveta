@@ -5,6 +5,7 @@
 .services {
    padding-top: 2rem;
    background-color: $color-background-primary;
+   font-size: 1.25rem;
 
    &__container {
       padding: 4rem;
@@ -71,12 +72,13 @@
       }
 
       &__header {
-         font-size: $portfolio-item-height / 20;
+         font-size: var(--font-size-big);
          text-transform: uppercase;
          font-weight: 600;
          text-align: center;
          &-sm {
-            font-size: $portfolio-item-height / 30;
+            font-size: calc(var(--font-size-big) * 0.75);
+            text-transform: uppercase;
             padding-bottom: 0.5rem;
          }
       }
@@ -88,20 +90,38 @@
          }
       }
 
-      &__text {
-         font-size: 1.5rem;
-         font-weight: 500;
-      }
-
       &__list {
+         width: 100%;
          list-style-type: none;
          text-align: center;
-      }
-
-      &__list-sm {
-         list-style-type: none;
-         text-align: center;
-         margin-bottom: 1.5rem;
+         &-sm {
+            margin-bottom: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            align-self: center;
+            li {
+               margin: auto;
+            }
+         }
+         &-item {
+            display: flex;
+            flex-flow: row nowrap;
+            line-height: var(--font-size-sm);
+            font-size: var(--font-size-sm);
+            align-items: flex-start;
+            justify-content: start;
+            div {
+               display: flex;
+               align-items: center;
+               justify-content: flex-end;
+            }
+            p {
+               justify-content: flex-start;
+               margin: 0 0 0.5rem 0.5rem;
+            }
+         }
       }
 
       &:hover {

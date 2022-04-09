@@ -17,7 +17,7 @@ const ContactCard = (props) => (
          <div className="contact-card__body-content">
             <div className="contact-card__body-content-header">
                <p>Pobočka advokátní kanceláře</p>
-               <p> Praha 8</p>
+               <p>Praha 2 - Vinohrady</p>
             </div>
             <div className="contact-card__body-content__box"></div>
             <div className="contact-card__body-content-title">
@@ -28,7 +28,7 @@ const ContactCard = (props) => (
                <p>
                   Adresa pobočky:&nbsp;
                   <a href="https://goo.gl/maps/KnbbKo2tqJuidwaq6">
-                     <span>Pobřežní 78, Praha 8 - Karlín</span>
+                     <span>Londýnská 730/59, Praha 2</span>
                   </a>
                </p>
             </div>

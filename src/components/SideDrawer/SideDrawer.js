@@ -42,10 +42,14 @@ const SideDrawer = (props) => {
       setContactState(!contactActive);
    };
 
-   const clickLink = (props, type) => {
+   const clickIntro = (item) => {
       props.click();
-      props.dispatch({ type: type });
+      dispatchMenuItem(item);
    };
+
+   function dispatchMenuItem(item) {
+      props.dispatch({ type: item });
+   }
 
    return (
       <nav className={drawerClasses}>
@@ -55,8 +59,7 @@ const SideDrawer = (props) => {
                className="side-drawer__item"
                smooth
                to="/#"
-               onClick={props.click}
-               // onClick={clickLink(props, 1)}
+               onClick={() => clickIntro(1)}
                onMouseEnter={toggleIntro}
                onMouseLeave={toggleIntro}
             >
@@ -73,7 +76,7 @@ const SideDrawer = (props) => {
                smooth
                to="/#pravni-sluzby"
                scroll={(el) => scrollWithOffset(el, -10)}
-               onClick={props.click}
+               onClick={() => clickIntro(2)}
                onMouseEnter={toggleServices}
                onMouseLeave={toggleServices}
             >

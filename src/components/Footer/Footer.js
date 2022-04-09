@@ -14,7 +14,7 @@ const footer = () => (
                <h5 className="main-footer__heading">Údaje</h5>
                <ul className="list">
                   <li>ČAK: 145454</li>
-                  <li>IČ: 73222222222</li>
+                  <li>IČ: 01343343</li>
                   <li>Datová schránka:</li>
                   <li>jkg1254x</li>
                </ul>
@@ -36,9 +36,9 @@ const footer = () => (
                         &nbsp;iveta@strmenova.cz
                      </a>
                   </li>
-                  <li>Pobřežní 78</li>
-                  <li>Praha 8 - Karlín</li>
-                  <li>186 00</li>
+                  <li>Londýnská 730/59</li>
+                  <li>Praha 2 - Vinohrady</li>
+                  <li>120 00</li>
                </ul>
             </div>
 

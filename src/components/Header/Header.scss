@@ -5,7 +5,7 @@
    display: flex;
    flex-direction: column;
    &__text {
-      font-size: $font-size-heading;
+      font-size: calc(var(--font-size-big) * 1.35);
       font-weight: 600;
       display: flex;
       flex-direction: row;
@@ -14,9 +14,9 @@
    }
 
    &__text-box {
-      width: $font-size-heading / 2;
-      height: $font-size-heading;
-      margin-right: $font-size-heading / 3;
+      width: calc(var(--font-size-big) / 2);
+      height: calc(var(--font-size-big) * 1.35);
+      margin-right: 1.25rem;
       background-color: $color-primary;
    }
 }
@@ -25,7 +25,7 @@
    display: flex;
    flex-direction: row;
    &__text {
-      font-size: $font-size-heading;
+      font-size: calc(var(--font-size-big) * 1.35);
       font-weight: 600;
       display: flex;
       flex-direction: row;
@@ -34,9 +34,9 @@
    }
 
    &__text-box {
-      width: $font-size-heading / 2;
-      height: $font-size-heading;
-      margin-right: $font-size-heading / 3;
+      width: calc(var(--font-size-big) / 2);
+      height: calc(var(--font-size-big) * 1.35);
+      margin-right: 1.25rem;
       background-color: $color-primary;
    }
    &-hr {

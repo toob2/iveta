@@ -104,7 +104,7 @@ const Toolbar = (props) => {
                         className="nav-underline nav-link"
                         smooth
                         to="/#"
-                        // onClick={() => props.dispatch({ type: 1 })}
+                        onClick={() => props.dispatch({ type: 1 })}
                      >
                         ÚVOD
                      </Link>
