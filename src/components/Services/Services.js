@@ -28,21 +28,12 @@ const services = () => (
                      <div className="portfolio__item__header-sm">Nemovitosti</div>
                      <ul className="portfolio__item__list-sm">
                         <li className="portfolio__item__list-item">
-                           <div>
-                              <FaChevronRight />
-                           </div>
                            <p>Kupní, darovací a směnné smlouvy</p>
                         </li>
                         <li className="portfolio__item__list-item">
-                           <div>
-                              <FaChevronRight />
-                           </div>
                            <p>Vklad práva do katastru nemovitostí</p>
                         </li>
                         <li className="portfolio__item__list-item">
-                           <div>
-                              <FaChevronRight />
-                           </div>
                            <p>Zástavní právo</p>
                         </li>
                      </ul>
@@ -51,15 +42,9 @@ const services = () => (
                      <div className="portfolio__item__header-sm">Smluvní agenda</div>
                      <ul className="portfolio__item__list-sm">
                         <li className="portfolio__item__list-item">
-                           <div>
-                              <FaChevronRight />
-                           </div>
                            <p>Sepsání a revize smluv</p>
                         </li>
                         <li className="portfolio__item__list-item">
-                           <div>
-                              <FaChevronRight />
-                           </div>
                            <p>
                               Nastavení a zajištění obchodních transakcí dle individuálních potřeb
                               klienta
@@ -71,9 +56,6 @@ const services = () => (
                      <div className="portfolio__item__header-sm">Pohledávky</div>
                      <ul className="portfolio__item__list-sm">
                         <li className="portfolio__item__list-item">
-                           <div>
-                              <FaChevronRight />
-                           </div>
                            <p>
                               Pomůžeme Vám s ochranou Vašich práv, a to nejen mimosoudně,
                               <br /> ale i v rámci soudního či exekučního řízení.
@@ -97,21 +79,12 @@ const services = () => (
                         <div className="portfolio__item__header-sm">Rozvody</div>
                         <ul className="portfolio__item__list-sm">
                            <li className="portfolio__item__list-item">
-                              <div>
-                                 <FaChevronRight />
-                              </div>
                               <p>Rozvodové řízení</p>
                            </li>
                            <li className="portfolio__item__list-item">
-                              <div>
-                                 <FaChevronRight />
-                              </div>
                               <p> Úprava péče o děti, výživného a styku s dětmi</p>
                            </li>
                            <li className="portfolio__item__list-item">
-                              <div>
-                                 <FaChevronRight />
-                              </div>
                               <p>
                                  Vypořádání vzájemných vztahů týkajících se společného majetku a
                                  bydlení
@@ -123,18 +96,12 @@ const services = () => (
                         <div className="portfolio__item__header-sm">Péče o nezletilé</div>
                         <ul className="portfolio__item__list-sm">
                            <li className="portfolio__item__list-item">
-                              <div>
-                                 <FaChevronRight />
-                              </div>
                               <p>
                                  Úprava výživného a při podávání návrhů na nahrazení souhlasu rodiče
                                  ve věcech týkajících se záležitostí, které jsou pro dítě významné.
                               </p>
                            </li>
                            <li className="portfolio__item__list-item">
-                              <div>
-                                 <FaChevronRight />
-                              </div>
                               <p>
                                  Úprava poměrů mezi nesezdanými páry a rodiči, kteří žijí odděleně.
                               </p>
@@ -158,15 +125,9 @@ const services = () => (
                         <div className="portfolio__item__header-sm">Zaměstnavatelé</div>
                         <ul className="portfolio__item__list-sm">
                            <li className="portfolio__item__list-item">
-                              <div>
-                                 <FaChevronRight />
-                              </div>
                               <p>Výpovědi z pracovního poměru</p>
                            </li>
                            <li className="portfolio__item__list-item">
-                              <div>
-                                 <FaChevronRight />
-                              </div>
                               <p>Agenturní zaměstnávání zaměstnanců</p>
                            </li>
                         </ul>
@@ -175,15 +136,9 @@ const services = () => (
                         <div className="portfolio__item__header-sm">Zaměstnanci</div>
                         <ul className="portfolio__item__list-sm">
                            <li className="portfolio__item__list-item">
-                              <div>
-                                 <FaChevronRight />
-                              </div>
                               <p>Výpovědi z pracovního poměru</p>
                            </li>
                            <li className="portfolio__item__list-item">
-                              <div>
-                                 <FaChevronRight />
-                              </div>
                               <p>Uplatnění nároků při pracovním úrazu a nemoci z povolání</p>
                            </li>
                         </ul>
@@ -205,30 +160,18 @@ const services = () => (
                         <div className="portfolio__item__header-sm">Společnosti</div>
                         <ul className="portfolio__item__list-sm">
                            <li className="portfolio__item__list-item">
-                              <div>
-                                 <FaChevronRight />
-                              </div>
                               <p>
                                  Zakládání obchodních společností a jejich zápis do obchodního
                                  rejstříku
                               </p>
                            </li>
                            <li className="portfolio__item__list-item">
-                              <div>
-                                 <FaChevronRight />
-                              </div>
                               <p>Změny ve vlastnické struktuře společností</p>
                            </li>
                            <li className="portfolio__item__list-item">
-                              <div>
-                                 <FaChevronRight />
-                              </div>
                               <p>Příprava smluv mezi společností a jejími orgány</p>
                            </li>
                            <li className="portfolio__item__list-item">
-                              <div>
-                                 <FaChevronRight />
-                              </div>
                               <p>Zajištění příslušných zápisů do obchodního rejstříku</p>
                            </li>
                         </ul>
